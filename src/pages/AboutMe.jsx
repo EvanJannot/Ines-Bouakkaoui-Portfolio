@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import FooterSignature from "../components/FooterSignature";
 
 export default function AboutMe() {
   return (
@@ -8,6 +9,7 @@ export default function AboutMe() {
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
         <p>Voici ma page de présentation...</p>
       </div>
+      <FooterSignature />
     </>
   );
 }

@@ -9,6 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import NeedsSection from "../components/NeedsSection";
 import ResultsSection from "../components/ResultsSection";
 import WhatIDidSection from "../components/WhatIDidSection";
+import FooterSignature from "../components/FooterSignature";
 
 export default function Project() {
   const { id } = useParams();
@@ -124,6 +125,7 @@ export default function Project() {
           </div>
         </div>
       </div>
+      <FooterSignature />
     </>
   );
 }
