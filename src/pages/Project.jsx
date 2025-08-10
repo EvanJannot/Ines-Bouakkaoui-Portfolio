@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { getProjectById } from "../data/projects";
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
@@ -14,6 +14,18 @@ import FooterSignature from "../components/FooterSignature";
 export default function Project() {
   const { id } = useParams();
   const project = getProjectById(id);
+  const navigate = useNavigate();
+
+  const backToProjects = (e) => {
+    e.preventDefault();
+    navigate("/"); // va sur Home
+    // attend un tick pour que Home se monte, puis scrolle vers l’ancre
+    setTimeout(() => {
+      document
+        .getElementById("projects")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
+  };
 
   const handleNavigateToSection = (id) => {
     const el = document.getElementById(id);
@@ -124,6 +136,16 @@ export default function Project() {
             <WhatIDidSection items={project.whatIDidItems} />
           </div>
         </div>
+      </div>
+      {/* Bouton retour aux projets */}
+      <div className="max-w-8xl mx-auto px-6 mt-12 mb-8 text-center">
+        <Link
+          to="/#projects"
+          onClick={backToProjects}
+          className="inline-block px-6 py-3 rounded-lg bg-black text-white font-medium hover:bg-white hover:text-black transition-colors"
+        >
+          ← Back to Projects
+        </Link>
       </div>
       <FooterSignature />
     </>
