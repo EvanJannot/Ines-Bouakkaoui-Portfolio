@@ -38,7 +38,7 @@ export default function Project() {
 
   const baseSections = [
     { id: "context", label: "Contexte" },
-    { id: "needs", label: "Besoins" },
+    { id: "needs", label: "Needs" },
     { id: "results", label: "Results" },
     { id: "what-i-did", label: "What I did" },
   ];
