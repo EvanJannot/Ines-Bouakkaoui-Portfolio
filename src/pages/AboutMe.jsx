@@ -1,0 +1,13 @@
+import Navbar from "../components/Navbar";
+
+export default function AboutMe() {
+  return (
+    <>
+      <Navbar />
+      <div className="p-10">
+        <h1 className="text-3xl font-bold mb-4">About Me</h1>
+        <p>Voici ma page de présentation...</p>
+      </div>
+    </>
+  );
+}
