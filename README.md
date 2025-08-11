@@ -1,7 +1,7 @@
 # Portfolio – Inès Bouakkaoui
 
 This portfolio is based on a **Figma mockup** designed by **Inès Bouakkaoui** and **developed by Evan Jannot**.  
-It showcases my projects and experiences in an interactive and responsive format, optimized for both desktop and mobile.
+It showcases her projects and experiences in an interactive and responsive format, optimized for both desktop and mobile.
 
 ---
 
