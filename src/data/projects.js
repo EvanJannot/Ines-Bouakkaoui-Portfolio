@@ -88,6 +88,7 @@ export const PROJECTS = [
         anchor: "ia-enemies",
         category: "IA Enemies",
         details: "Behavior trees, perception tweaks, navmesh tuning...",
+        longText: "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected."
       },
       {
         category: "Character & Animation",
