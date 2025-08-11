@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { HiX } from "react-icons/hi";
 
 export default function ResultsSection({
   id = "results",
@@ -130,7 +131,7 @@ function Lightbox({ img, onClose, onPrev, onNext }) {
             className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white"
             aria-label="Close"
           >
-            ×
+            <HiX className="w-5 h-5" />
           </button>
 
           {/* Image */}
