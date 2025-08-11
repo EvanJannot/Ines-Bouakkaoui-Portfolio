@@ -67,16 +67,20 @@ export const PROJECTS = [
         details:
           "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
-          "<strong> • Laser refraction/emission : </strong>** \n Blueprints for \n• Triggers\n• Balancing…",
+          "<strong> • Laser refraction/emission : </strong> \n Blueprints for \n• Triggers\n• Balancing…",
         tag: ["Tech Design", "Tech Art"],
         media: [
           banniereEnfantsLunes,
           {
             type: "video",
-            src: "https://www.youtube.com/watch?v=_T5f8cP532c",
+            src: "https://youtu.be/FwGjZGIe-u8",
             poster: banniereEnfantsLunes,
           },
-          "https://youtu.be/dQw4w9WgXcQ",
+          {
+            type: "video",
+            src: "https://youtu.be/FwGjZGIe-u8",
+            poster: banniereEnfantsLunes
+          },
           { type: "image", src: banniereEnfantsLunes },
         ],
       },
@@ -177,7 +181,7 @@ export const PROJECTS = [
     summary: "Small resume of what I did",
     thumb: "",
   },
-  {
+  /*{
     id: "lucy",
     title: "Lucy",
     tags: ["Tech Art"],
@@ -186,7 +190,7 @@ export const PROJECTS = [
     toolIcon: "",
     summary: "Small resume of the game",
     thumb: "",
-  },
+  },*/
 ];
 
 export const getProjectById = (id) => PROJECTS.find((p) => p.id === id);
