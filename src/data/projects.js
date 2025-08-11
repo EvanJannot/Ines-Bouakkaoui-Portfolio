@@ -17,7 +17,7 @@ export const PROJECTS = [
     engineIcon: unrealLogo,
     toolIcon: null,
     contextMedia: banniereEnfantsLunes,
-    summary: "Small resume of what I did",
+    summary: "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, Bugs fixing",
     thumb: banniereEnfantsLunes,
     repoUrl: "https://github.com/collegebdeb/H25_JVII_gr01_Enfants-Lunes",
     duration: "School project - took 2 months and 18 days",
@@ -34,7 +34,7 @@ export const PROJECTS = [
     needs: [
       {
         label: "Game design and pitch (documentation)",
-        desc: "game without text, relying on visual storytelling and symbols.",
+        desc: "we decided to go with a game without text, relying on visual storytelling and symbols.",
       },
       {
         label: "Laser game mechanics",
@@ -67,7 +67,7 @@ export const PROJECTS = [
         details:
           "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
-          "<strong> • Laser refraction/emission : </strong> \n Blueprints for \n• Triggers\n• Balancing…",
+          "<strong> • Laser refraction/emission : </strong> \n Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location. Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n<strong>• Checkpoints </strong> \nDeveloped respawn points, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, and implemented camera fade-out transitions on respawn. \n \n<strong>• Object grabbing :</strong> \n Scripted mechanics for grabbing objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning.",
         tag: ["Tech Design", "Tech Art"],
         media: [
           banniereEnfantsLunes,
