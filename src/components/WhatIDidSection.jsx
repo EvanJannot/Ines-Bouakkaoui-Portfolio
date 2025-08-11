@@ -137,7 +137,7 @@ export default function WhatIDidSection({ items = [] }) {
                         <img
                           src={m.src}
                           alt={`${item.category} ${idx + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover hover:cursor-pointer"
                         />
                       ) : (
                         <>
@@ -146,7 +146,7 @@ export default function WhatIDidSection({ items = [] }) {
                             <img
                               src={m.poster}
                               alt={`${item.category} video ${idx + 1}`}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover hover:cursor-pointer"
                             />
                           ) : (
                             <div className="w-full h-full grid place-items-center bg-black/5">
@@ -156,7 +156,7 @@ export default function WhatIDidSection({ items = [] }) {
                             </div>
                           )}
                           {/* Play overlay */}
-                          <span className="absolute inset-0 grid place-items-center">
+                          <span className="absolute inset-0 grid place-items-center hover:cursor-pointer">
                             <span className="flex items-center justify-center w-12 h-12 rounded-full bg-black/70 text-white transition group-hover:scale-105">
                               <HiPlay className="w-6 h-6 translate-x-[1px]" />
                             </span>
@@ -185,7 +185,7 @@ export default function WhatIDidSection({ items = [] }) {
             {/* Close */}
             <button
               onClick={close}
-              className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white"
+              className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white hover:cursor-pointer"
               aria-label="Close"
             >
               <HiX className="w-5 h-5" />
