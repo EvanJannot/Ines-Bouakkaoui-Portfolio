@@ -40,7 +40,7 @@ export default function ContextSection({
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold mb-2 text-xl">Outils</h3>
+                <h3 className="font-semibold mb-2 text-xl">Tools</h3>
                 <ul className="space-y-1 text-sm">
                   {tools.map((t, i) => (
                     <li key={i}>{t}</li>

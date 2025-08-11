@@ -2,7 +2,11 @@ import unrealLogo from "../assets/UnrealLogo.png";
 import unityLogo from "../assets/UnityLogo.png";
 import substanceLogo from "../assets/substanceLogo.svg";
 import BlenderLogo from "../assets/BlenderLogo.png";
-import Tien from "../assets/Tien.jpg";
+import banniereEnfantsLunes from "../assets/Enfants-Lunes/Splash_Enfants-Lunes.png";
+import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png"
+import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png"
+import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png"
+import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png"
 
 export const PROJECTS = [
   {
@@ -12,21 +16,21 @@ export const PROJECTS = [
     points: ["Puzzle Game", "Team of 4", "Blueprint, UE 3D tools"],
     engineIcon: unrealLogo,
     toolIcon: null,
-    contextMedia: Tien,
+    contextMedia: banniereEnfantsLunes,
     summary: "Small resume of what I did",
-    thumb: Tien,
+    thumb: banniereEnfantsLunes,
     repoUrl: "https://github.com/collegebdeb/H25_JVII_gr01_Enfants-Lunes",
-    duration: "2 months and 18 days",
+    duration: "School project - took 2 months and 18 days",
     year: "2025",
     contextText:
-      "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization...",
+      "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization. The player takes on the role of Leila, a young woman who seeks to escape to the surface after discovering a secret about her people.",
     team: [
       "Nadia Rachid — UI Designer, Cinematics",
       "Noure Chafry — UI Artist, Level Designer",
       "Adam Nasr — 3D Artist, Level Designer, Cinematics",
       "Me — Generalist Designer, Tech Art, Cinematics",
     ],
-    tools: ["Unreal Engine", "Blueprint", "Figma", "Blender"],
+    tools: ["Unreal Engine", "Blueprint", "Canva/Figma", "Miro", "Notion"],
     needs: [
       {
         label: "Game design and pitch (documentation)",
@@ -49,30 +53,30 @@ export const PROJECTS = [
         desc: "ensure artistic vision and symbolic consistency.",
       },
     ],
-    resultsVideo: "https://www.youtube.com/watch?v=_T5f8cP532c",
+    resultsVideo: "https://youtu.be/FwGjZGIe-u8",
     resultsImages: [
-      { src: Tien, alt: "Gameplay 1" },
-      { src: "/images/enfants-lunes/shot2.jpg", alt: "Gameplay 2" },
-      { src: "/images/enfants-lunes/shot3.jpg", alt: "Gameplay 3" },
-      { src: "/images/enfants-lunes/shot4.jpg", alt: "Gameplay 4" },
+      { src: ELGameplay1, alt: "Gameplay 1" },
+      { src: ELGameplay2, alt: "Gameplay 2" },
+      { src: ELGameplay3, alt: "Gameplay 3" },
+      { src: ELGameplay4, alt: "Gameplay 4" },
     ],
     whatIDidItems: [
       {
         anchor: "gameplay-mechanics",
         category: "Gameplay mechanics",
-        details: "Laser emission & refraction / scripted events…",
+        details: "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
-          "J’ai conçu et intégré…\n- Réfraction/émission\n- Triggers\n- Balancing…",
-        tag: "Tech Design",
+          "• Laser refraction/emission :** \n Blueprints for \n• Triggers\n• Balancing…",
+        tag: ["Tech Design", "Tech Art"],
         media: [
-          Tien,
+          banniereEnfantsLunes,
           {
             type: "video",
             src: "https://www.youtube.com/watch?v=_T5f8cP532c",
-            poster: Tien,
+            poster: banniereEnfantsLunes,
           },
           "https://youtu.be/dQw4w9WgXcQ",
-          { type: "image", src: Tien },
+          { type: "image", src: banniereEnfantsLunes },
         ],
       },
       {
