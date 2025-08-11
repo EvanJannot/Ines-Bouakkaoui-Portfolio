@@ -25,7 +25,7 @@ export const PROJECTS = [
     contextText:
       "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization. The player takes on the role of Leila, a young woman who seeks to escape to the surface after discovering a secret about her people.",
     team: [
-      "Nadia Rachid — UI Designer, Cinematics",
+      "Nadia Rochdi — UI Designer, Cinematics",
       "Noure Chafry — UI Artist, Level Designer",
       "Adam Nasr — 3D Artist, Level Designer, Cinematics",
       "Me — Generalist Designer, Tech Art, Cinematics",
@@ -106,6 +106,12 @@ export const PROJECTS = [
       {
         category: "Sound integration",
         anchor: "sound-integration",
+        details:
+          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+      },
+      {
+        category: "Fixing bugs",
+        anchor: "fixing-code",
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
       },
