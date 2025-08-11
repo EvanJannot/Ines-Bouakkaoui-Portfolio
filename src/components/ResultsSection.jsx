@@ -27,7 +27,7 @@ export default function ResultsSection({
     <section id={id} className="scroll-mt-28 mt-10">
       {/* Titre pilule */}
       <div className="flex justify-center mb-4">
-        <span className="px-4 py-2 rounded-lg bg-black text-white font-semibold">
+        <span className="px-4 py-2 rounded-lg bg-black text-white font-semibold text-2xl">
           {title}
         </span>
       </div>
@@ -105,38 +105,48 @@ function MainVideo({ videoUrl }) {
 
 function Lightbox({ img, onClose, onPrev, onNext }) {
   return (
-    <div className="fixed inset-0 z-50 bg-black/80">
-      {/* zone clic pour fermer */}
-      <button
-        className="absolute inset-0"
-        onClick={onClose}
-        aria-label="Close"
-      />
-      {/* contenu centré */}
-      <div className="relative z-10 w-full h-full grid place-items-center p-4">
-        <img
-          src={img.src}
-          alt={img.alt || "Full image"}
-          className="max-h-[82vh] max-w-[92vw] object-contain rounded-md shadow-2xl"
-        />
-        {/* Controls */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white text-xl grid place-items-center"
-          aria-label="Close"
-        >
-          ×
-        </button>
+    <div
+      className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div
+        className="relative flex items-center"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Bouton précédent */}
         <button
           onClick={onPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl grid place-items-center"
+          className="absolute -left-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl grid place-items-center"
           aria-label="Previous"
         >
           ‹
         </button>
+
+        {/* Contenu principal */}
+        <div className="relative max-w-6xl w-full">
+          {/* Bouton fermer */}
+          <button
+            onClick={onClose}
+            className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white"
+            aria-label="Close"
+          >
+            ×
+          </button>
+
+          {/* Image */}
+          <div className="bg-black/10 rounded-lg overflow-hidden p-0 md:p-2">
+            <img
+              src={img.src}
+              alt={img.alt || "Full image"}
+              className="max-h-[80vh] w-auto mx-auto object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Bouton suivant */}
         <button
           onClick={onNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl grid place-items-center"
+          className="absolute -right-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 text-white text-2xl grid place-items-center"
           aria-label="Next"
         >
           ›

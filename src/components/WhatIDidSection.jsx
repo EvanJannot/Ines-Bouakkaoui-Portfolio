@@ -92,14 +92,26 @@ export default function WhatIDidSection({ items = [] }) {
                 <header className="mb-3 flex items-start justify-between">
                   <h3 className="text-lg font-semibold">{item.category}</h3>
                   {item.tag && (
-                    <span className="px-2 py-0.5 text-xs rounded-full border border-black/60 bg-white">
-                      {item.tag}
-                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {(Array.isArray(item.tag) ? item.tag : [item.tag]).map(
+                        (t, idx) => (
+                          <span
+                            key={idx}
+                            className="px-2 py-0.5 text-xs rounded-full border border-black/60 bg-white"
+                          >
+                            {t}
+                          </span>
+                        )
+                      )}
+                    </div>
                   )}
                 </header>
-                <div className="text-sm md:text-base leading-relaxed text-black/85 whitespace-pre-line">
-                  {item.longText || item.details}
-                </div>
+                <div
+                  className="text-sm md:text-base leading-relaxed text-black/85 whitespace-pre-line"
+                  dangerouslySetInnerHTML={{
+                    __html: item.longText || item.details,
+                  }}
+                ></div>
               </div>
 
               {/* Galerie dynamique image/vidéo */}

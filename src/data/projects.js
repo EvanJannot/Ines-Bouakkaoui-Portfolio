@@ -3,10 +3,10 @@ import unityLogo from "../assets/UnityLogo.png";
 import substanceLogo from "../assets/substanceLogo.svg";
 import BlenderLogo from "../assets/BlenderLogo.png";
 import banniereEnfantsLunes from "../assets/Enfants-Lunes/Splash_Enfants-Lunes.png";
-import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png"
-import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png"
-import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png"
-import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png"
+import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
+import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png";
+import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
+import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
 
 export const PROJECTS = [
   {
@@ -64,9 +64,10 @@ export const PROJECTS = [
       {
         anchor: "gameplay-mechanics",
         category: "Gameplay mechanics",
-        details: "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
+        details:
+          "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
-          "• Laser refraction/emission :** \n Blueprints for \n• Triggers\n• Balancing…",
+          "<strong> • Laser refraction/emission : </strong>** \n Blueprints for \n• Triggers\n• Balancing…",
         tag: ["Tech Design", "Tech Art"],
         media: [
           banniereEnfantsLunes,
