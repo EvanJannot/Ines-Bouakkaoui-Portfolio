@@ -45,7 +45,12 @@ export default function ProjectSummaryCard({
             ))}
           </ul>
 
-          <p className="text-sm text-black/70">{summary}</p>
+          <p
+            className="text-sm text-black/70"
+            dangerouslySetInnerHTML={{
+              __html: summary,
+            }}
+          />
         </div>
 
         {/* Colonne droite : logos */}

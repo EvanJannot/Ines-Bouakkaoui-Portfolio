@@ -43,7 +43,7 @@ export default function ResultsSection({
             <button
               key={i}
               onClick={() => setLightboxIdx(i)}
-              className="aspect-[4/3] rounded-md overflow-hidden border border-black/10 hover:border-black/40 transition"
+              className="aspect-[4/3] rounded-md overflow-hidden border border-black/10 hover:border-black/40 transition hover:cursor-pointer"
               aria-label={`Open image ${i + 1}`}
             >
               <img
@@ -128,7 +128,7 @@ function Lightbox({ img, onClose, onPrev, onNext }) {
           {/* Bouton fermer */}
           <button
             onClick={onClose}
-            className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white"
+            className="absolute -top-3 -right-3 md:top-0 md:right-0 z-[101] inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/90 text-black shadow hover:bg-white hover:cursor-pointer"
             aria-label="Close"
           >
             <HiX className="w-5 h-5" />
