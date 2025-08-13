@@ -2,6 +2,8 @@ import unrealLogo from "../assets/UnrealLogo.png";
 import unityLogo from "../assets/UnityLogo.png";
 import substanceLogo from "../assets/SubstanceLogo.svg";
 import BlenderLogo from "../assets/BlenderLogo.png";
+
+// Enfants-Lunes assets
 import banniereEnfantsLunes from "../assets/Enfants-Lunes/Splash_Enfants-Lunes.png";
 import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
 import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png";
@@ -9,7 +11,10 @@ import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
 import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
 
 export const PROJECTS = [
+
+  //Enfants-Lunes project  
   {
+    //Card
     id: "enfants-lunes",
     title: "Enfants–Lunes",
     tags: ["Tech Design", "Tech Art"],
@@ -20,9 +25,13 @@ export const PROJECTS = [
     summary:
       "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, Bugs fixing",
     thumb: banniereEnfantsLunes,
+
+    //Page
     repoUrl: "https://github.com/collegebdeb/H25_JVII_gr01_Enfants-Lunes",
     duration: "School project - took 2 months and 18 days",
     year: "2025",
+
+    //Context
     contextText:
       "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization. The player takes on the role of Leila, a young woman who seeks to escape to the surface after discovering a secret about her people.",
     team: [
@@ -33,6 +42,8 @@ export const PROJECTS = [
       "Me — Generalist Designer, Tech Art, Cinematics",
     ],
     tools: ["Unreal Engine", "Blueprint", "Canva/Figma", "Miro", "Notion"],
+
+    //Needs
     needs: [
       {
         label: "Game design and pitch (documentation)",
@@ -63,6 +74,8 @@ export const PROJECTS = [
       { src: ELGameplay4, alt: "Gameplay 4" },
     ],
     whatIDidItems: [
+
+      //Gameplay Mechanics
       {
         anchor: "gameplay-mechanics",
         category: "Gameplay mechanics",
@@ -96,6 +109,8 @@ export const PROJECTS = [
           { type: "image", src: banniereEnfantsLunes },
         ],
       },
+
+      //IA Enemies
       {
         anchor: "ia-enemies",
         category: "IA Enemies",
@@ -106,6 +121,8 @@ export const PROJECTS = [
           "Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
         tag: ["Tech Design",],
       },
+
+      //Character & Animation
       {
         category: "Character & Animation",
         anchor: "character-animation",
@@ -121,6 +138,8 @@ export const PROJECTS = [
           " for seamless gameplay integration.",
         tag: ["Tech Design", "Tech Art"],
       },
+
+      //Shaders & Materials
       {
         category: "Shaders & Materials",
         anchor: "shaders",
@@ -134,6 +153,8 @@ export const PROJECTS = [
           "Created a World Align material base for the level artists.",
         tag: ["Tech Design", "Tech Art"],
       },
+
+      //Cinematics
       {
         category: "Cinematics",
         anchor: "cinematics",
@@ -149,6 +170,8 @@ export const PROJECTS = [
           "ensuring consistent visual and audio feedback.",
         tag: ["Tech Design", "Tech Art"],
       },
+
+      //Sound integration
       {
         category: "Sound integration",
         anchor: "sound-integration",
@@ -161,6 +184,8 @@ export const PROJECTS = [
           "Implemented and scripted the sound effects for stamina refill, including playback during the refill process and a distinct sound at completion.",
         tag: ["Tech Design",],
       },
+
+      //Debug
       {
         category: "Debug",
         anchor: "debug",
@@ -175,7 +200,10 @@ export const PROJECTS = [
         tag: ["Tech Design",],
       },
     ],
-  },
+  }, //Fin Enfants-Lunes
+
+
+  // Projets Intégration d'animations
   {
     id: "anim-integration",
     title: "Animation integration",
