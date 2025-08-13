@@ -64,7 +64,7 @@ export default function MyProjects() {
               onClick={() => setActive(f)}
               className={[
                 "px-4 py-2 rounded-lg border border-black/40 bg-white/70 backdrop-blur-sm",
-                "text-base font-medium transition",
+                "text-base font-medium transition hover:cursor-pointer",
                 active === f ? "ring-2 ring-black" : "hover:bg-white",
               ].join(" ")}
             >

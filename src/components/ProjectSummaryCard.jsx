@@ -77,7 +77,7 @@ export default function ProjectSummaryCard({
       <div className="mt-auto flex items-center justify-end gap-2">
         <button
           onClick={onMoreInfo}
-          className="px-3 py-1 rounded-full text-xs bg-[#004AAD] border border-black/30 hover:brightness-105 hover:bg-[#6183B2] transition text-white "
+          className="px-3 py-1 rounded-full text-xs bg-[#004AAD] border border-black/30 hover:brightness-105 hover:bg-[#6183B2] transition text-white hover:cursor-pointer"
         >
           More info
         </button>
