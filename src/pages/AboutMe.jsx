@@ -7,7 +7,7 @@ export default function AboutMe() {
       <Navbar />
       <div className="p-10">
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
-        <p>Voici ma page de présentation...</p>
+        <p>Under construction...</p>
       </div>
       <FooterSignature />
     </>
