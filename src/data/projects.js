@@ -99,17 +99,18 @@ export const PROJECTS = [
       {
         anchor: "ia-enemies",
         category: "IA Enemies",
-        details: "Behavior trees, perception tweaks, navmesh tuning...",
+        details: "Behavior Trees / spline-based patrols / player chase & capture / search & investigate / sound detection",
         longText:
           "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n " +
           "Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n " +
           "Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
+        tag: ["Tech Design",],
       },
       {
         category: "Character & Animation",
         anchor: "character-animation",
         details:
-          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+          "Custom character creation / rig & mesh modifications / Metahuman integration / animation retargeting & refinement / Animation Blueprint setup",
         longText:
           "<strong>• Character creation & Integration : </strong>" +
           "\n Integration of the Sparrow asset from the Paragon franchise, modified the rig and mesh in Unreal Engine 5 to remove the face and unnecessary elements (bow, cape, etc.)." +
@@ -118,24 +119,26 @@ export const PROJECTS = [
           "<strong>• Animation integration : </strong> \nImported animations from Mixamo, retargeted them to the custom rig, and refined facial animations for the Metahuman." +
           "Corrected animation artifacts, created animation montages and layered animation sequences, and configured the Animation Blueprint (Anim Graph, Event Graph, and state machines)" +
           " for seamless gameplay integration.",
+        tag: ["Tech Design", "Tech Art"],
       },
       {
         category: "Shaders & Materials",
         anchor: "shaders",
         details:
-          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+          "Laser material / outline shader / placement indicator shader / reusable Actor Component / World Align material base",
         longText:
           "Developed custom materials including a laser material, an outline shader for grabbable assets, and a placement indicator shader for object positioning. " +
           "Scripted the triggering of the placement indicator in Level Blueprint \n\n" +
           "Created a reusable Actor Component in Blueprint to automate shader application: automatically retrieved the mesh and its attached collision sphere, applied the appropriate " +
           "shader, and handled player-overlap events for interactive feedback. \n\n" +
-          "Created a World Align material base for the level artists."
+          "Created a World Align material base for the level artists.",
+        tag: ["Tech Design", "Tech Art"],
       },
       {
         category: "Cinematics",
         anchor: "cinematics",
         details:
-          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+          "Level Blueprint triggers / tutorial door-opening / guard-blockade / library lever fix / crystal-door sequence / gear puzzle fix",
         longText:
           "Scripted the triggering of cinematics within the Levels Blueprints to ensure seamless integration with gameplay events. \n\n" +
           "Developed the door-opening cinematic triggered after solving the tutorial puzzle at the start of the game. \n\n" +
@@ -143,29 +146,33 @@ export const PROJECTS = [
           "Corrected the cinematic triggered after the player pulls the lever in the library. \n\n" +
           "Designed the crystal-door cinematic, activated when the player fires the laser at the crystal long enough to unlock the path to the gear room. \n\n" +
           "Improved the first gear puzzle cinematic by synchronizing sound with the falling object and fixing a bug where the gear could remain stuck, " +
-          "ensuring consistent visual and audio feedback."
+          "ensuring consistent visual and audio feedback.",
+        tag: ["Tech Design", "Tech Art"],
       },
       {
         category: "Sound integration",
         anchor: "sound-integration",
         details:
-          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+          "Original soundtrack integration / ambient loops / spatialized flames & machinery / Audio Listener setup / stamina refill SFX",
         longText:
           "Integrated original soundtrack composed by Maxime, working closely with him to implement ambient loops. \n\n" +
           "Added spatialized sound effects for flames (placed by level artists in the level) and gear machinery to enhance environmental immersion. \n\n" +
           "Scripted the Audio Listener setup to ensure accurate spatial audio positioning relative to the player. \n\n" +
-          "Implemented and scripted the sound effects for stamina refill, including playback during the refill process and a distinct sound at completion."
+          "Implemented and scripted the sound effects for stamina refill, including playback during the refill process and a distinct sound at completion.",
+        tag: ["Tech Design",],
       },
       {
         category: "Debug",
         anchor: "debug",
         details:
-          "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+          "Interaction prompt fix / stamina UI fix / input lock in intro cinematic / gear puzzle fix / EU pipeline crash fix",
         longText:
           "Fixed interaction feedback (“E” prompt) remaining on screen due to object trigger logic. \n\n" +
           "Corrected stamina UI animation behavior after a refill. \n\n" +
           "Disabled player inputs during the introduction cinematic to maintain immersion. \n\n" +
-          "Fixed the gear puzzle logic in the library’s Level Blueprint to ensure proper functionality."
+          "Fixed the gear puzzle logic in the library’s Level Blueprint to ensure proper functionality. \n\n" +
+          "Fixed the EU pipeline that was crashing the build.",
+        tag: ["Tech Design",],
       },
     ],
   },
