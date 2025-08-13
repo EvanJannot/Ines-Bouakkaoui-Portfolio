@@ -119,28 +119,38 @@ export const PROJECTS = [
           " for seamless gameplay integration.",
       },
       {
-        category: "Shaders",
+        category: "Shaders & Materials",
         anchor: "shaders",
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+        longText:
+          "Developed custom materials including a laser material, an outline shader for grabbable assets, and a placement indicator shader for object positioning. \n\n" +
+          "Created a reusable Actor Component in Blueprint to automate shader application: automatically retrieved the mesh and its attached collision sphere, applied the appropriate " +
+          "shader, and handled player-overlap events for interactive feedback."
       },
       {
         category: "Cinematics",
         anchor: "cinematics",
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+        longText:
+          ""
       },
       {
         category: "Sound integration",
         anchor: "sound-integration",
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+        longText:
+          ""
       },
       {
         category: "Fixing bugs",
         anchor: "fixing-code",
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
+        longText:
+          ""
       },
     ],
   },
