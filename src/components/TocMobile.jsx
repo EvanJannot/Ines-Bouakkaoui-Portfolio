@@ -29,19 +29,19 @@ export default function TocMobile({ sections, onNavigate }) {
         />
       )}
 
-      {/* Panneau latéral collé à gauche */}
+      {/* Panneau latéral */}
       <div
         className={[
-          "fixed top-28 left-0 z-50",
-          "w-[180px] sm:w-[200px]",
+          "fixed top-28 left-1 z-50",
+          "w-[160px] sm:w-[180px]", // réduit légèrement la largeur
           "transition-transform duration-300",
-          open ? "translate-x-0" : "-translate-x-full",
+          open ? "translate-x-0" : "-translate-x-[110%]",
         ].join(" ")}
       >
         <div className="rounded-3xl bg-[#FFD1B5] text-black shadow-xl overflow-hidden ml-[-16px]">
-          <div className="flex items-center justify-end p-3">
-            <div className="flex-1 pl-3">
-              <p className="text-xs font-extrabold uppercase tracking-wide">
+          <div className="flex items-center justify-end pl-2 pt-2">
+            <div className="flex-1 pl-2">
+              <p className="text-[10px] font-extrabold uppercase tracking-wide">
                 On this page
               </p>
               <hr className="border-black mt-1" />
@@ -49,13 +49,13 @@ export default function TocMobile({ sections, onNavigate }) {
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="inline-flex w-8 h-8 items-center justify-center rounded-full bg-black/15 hover:bg-white/25"
+              className="inline-flex w-7 h-7 items-center justify-center rounded-full bg-black/15 hover:bg-white/25"
             >
-              <HiX size={20} />
+              <HiX size={18} />
             </button>
           </div>
 
-          <nav className="px-6 pb-6">
+          <nav className="px-4 pb-2">
             {sections.map((s, i) => (
               <div key={s.id}>
                 <a
@@ -64,12 +64,12 @@ export default function TocMobile({ sections, onNavigate }) {
                     e.preventDefault();
                     go(s.id);
                   }}
-                  className="block py-3 font-bold tracking-tight"
+                  className="block py-2 text-[13px] font-semibold tracking-tight"
                 >
                   {s.label}
                 </a>
                 {i !== sections.length - 1 && (
-                  <hr className="border-black/60" />
+                  <hr className="border-black/40" />
                 )}
               </div>
             ))}

@@ -30,7 +30,7 @@ export default function ContextSection({
             <div className="flex items-start justify-between mb-3">
               <h2 className="text-2xl font-semibold">{title}</h2>
               {duration ? (
-                <span className="text-xs md:text-sm font-bold text-black/70">
+                <span className="text-xs md:text-sm font-bold text-black/70 pl-4">
                   {duration}
                 </span>
               ) : null}
