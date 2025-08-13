@@ -110,7 +110,7 @@ export const PROJECTS = [
         category: "Character & Animation",
         anchor: "character-animation",
         details:
-          "Custom character creation / rig & mesh modifications / Metahuman integration / animation retargeting & refinement / Animation Blueprint setup",
+          "Metahuman creation & integration / rig & mesh modifications / animation retargeting & refinement / Animation Blueprint setup",
         longText:
           "<strong>• Character creation & Integration : </strong>" +
           "\n Integration of the Sparrow asset from the Paragon franchise, modified the rig and mesh in Unreal Engine 5 to remove the face and unnecessary elements (bow, cape, etc.)." +
