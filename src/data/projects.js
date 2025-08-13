@@ -68,7 +68,17 @@ export const PROJECTS = [
         details:
           "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
-          "<strong> • Laser refraction/emission : </strong> \n Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location. Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n<strong>• Checkpoints </strong> \nDeveloped respawn points, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, and implemented camera fade-out transitions on respawn. \n \n<strong>• Object grabbing :</strong> \n Scripted mechanics using Physics constraints for grabbing objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning.",
+          "<strong> • Laser refraction/emission : </strong> \n" +
+          "Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location." +
+          "Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control." +
+          "Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n" +
+
+          "<strong>• Checkpoints </strong> \n" +
+          "Developed respawn points, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, " +
+          "and implemented camera fade-out transitions on respawn. \n \n" +
+
+          "<strong>• Object grabbing :</strong> \n Scripted mechanics using Physics constraints for grabbing " +
+          "objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning.",
         tag: ["Tech Design", "Tech Art"],
         media: [
           banniereEnfantsLunes,
@@ -90,7 +100,9 @@ export const PROJECTS = [
         category: "IA Enemies",
         details: "Behavior trees, perception tweaks, navmesh tuning...",
         longText:
-          "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
+          "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n " +
+          "Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n " +
+          "Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
       },
       {
         category: "Character & Animation",
@@ -98,7 +110,13 @@ export const PROJECTS = [
         details:
           "Laser emission & refraction / Scripted events laser related / Grabbing objects",
         longText:
-          "<strong>• Character creation & integration : </strong> \n Integration of the Sparrow asset from the Paragon franchise, modified the rig and mesh in Unreal Engine 5 to remove the face and unnecessary elements (bow, cape, etc.). Created a custom character by generating a Metahuman and masked neck area, and merged the Metahuman face onto the Sparrow rig in the Character Blueprint. Adjusted ground shadow rendering (mesh bounds scale) and customized clothing material colors to align with the art direction. \n\n<strong>• Animation integration : </strong> \nImported animations from Mixamo, retargeted them to the custom rig, and refined facial animations for the Metahuman. Corrected animation artifacts, created animation montages and layered animation sequences, and configured the Animation Blueprint (Anim Graph, Event Graph, and state machines) for seamless gameplay integration.",
+          "<strong>• Character creation & Integration : </strong>" +
+          "\n Integration of the Sparrow asset from the Paragon franchise, modified the rig and mesh in Unreal Engine 5 to remove the face and unnecessary elements (bow, cape, etc.)." +
+          " Created a custom character by generating a Metahuman and masked neck area, and merged the Metahuman face onto the Sparrow rig in the Character Blueprint." +
+          "Adjusted ground shadow rendering (mesh bounds scale) and customized clothing material colors to align with the art direction. \n\n" +
+          "<strong>• Animation integration : </strong> \nImported animations from Mixamo, retargeted them to the custom rig, and refined facial animations for the Metahuman." +
+          "Corrected animation artifacts, created animation montages and layered animation sequences, and configured the Animation Blueprint (Anim Graph, Event Graph, and state machines)" +
+          " for seamless gameplay integration.",
       },
       {
         category: "Shaders",
