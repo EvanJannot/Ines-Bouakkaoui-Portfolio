@@ -1,6 +1,6 @@
 import unrealLogo from "../assets/UnrealLogo.png";
 import unityLogo from "../assets/UnityLogo.png";
-import substanceLogo from "../assets/substanceLogo.svg";
+import substanceLogo from "../assets/SubstanceLogo.svg";
 import BlenderLogo from "../assets/BlenderLogo.png";
 import banniereEnfantsLunes from "../assets/Enfants-Lunes/Splash_Enfants-Lunes.png";
 import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
@@ -17,7 +17,8 @@ export const PROJECTS = [
     engineIcon: unrealLogo,
     toolIcon: null,
     contextMedia: banniereEnfantsLunes,
-    summary: "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, Bugs fixing",
+    summary:
+      "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, Bugs fixing",
     thumb: banniereEnfantsLunes,
     repoUrl: "https://github.com/collegebdeb/H25_JVII_gr01_Enfants-Lunes",
     duration: "School project - took 2 months and 18 days",
@@ -79,7 +80,7 @@ export const PROJECTS = [
           {
             type: "video",
             src: "https://youtu.be/FwGjZGIe-u8",
-            poster: banniereEnfantsLunes
+            poster: banniereEnfantsLunes,
           },
           { type: "image", src: banniereEnfantsLunes },
         ],
@@ -88,7 +89,8 @@ export const PROJECTS = [
         anchor: "ia-enemies",
         category: "IA Enemies",
         details: "Behavior trees, perception tweaks, navmesh tuning...",
-        longText: "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected."
+        longText:
+          "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
       },
       {
         category: "Character & Animation",
