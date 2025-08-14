@@ -101,7 +101,7 @@ export const PROJECTS = [
           {
             //Video demo laser dans le niveau test
             type: "video",
-            src: "https://youtu.be/FwGjZGIe-u8",
+            src: "https://youtu.be/GO4FGZarfxo",
           },
           {
             //Video demo laser dans le jeu
