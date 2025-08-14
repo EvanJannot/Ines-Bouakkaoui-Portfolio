@@ -83,8 +83,8 @@ export const PROJECTS = [
           "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
           "<strong> • Laser refraction/emission : </strong> \n" +
-          "Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location." +
-          "Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control." +
+          "Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location. \n" +
+          "Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. \n" +
           "Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n" +
 
           "<strong>• Checkpoints </strong> \n" +
@@ -92,14 +92,16 @@ export const PROJECTS = [
           "and implemented camera fade-out transitions on respawn. \n \n" +
 
           "<strong>• Object grabbing :</strong> \n Scripted mechanics using Physics constraints for grabbing " +
-          "objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning.",
+          "objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning. \n\n" +
+
+          "<strong>• Puzzles mechanics :</strong> \n" +
+          "Contributed to scripting puzzle logic, including conditions for puzzle resolution, unlocking subsequent puzzles, and ensuring proper gameplay flow.",
         tag: ["Tech Design", "Tech Art"],
         media: [
           banniereEnfantsLunes,
           {
             type: "video",
-            src: "https://youtu.be/FwGjZGIe-u8",
-            poster: banniereEnfantsLunes,
+            src: "https://youtu.be/GO4FGZarfxo",
           },
           {
             type: "video",
