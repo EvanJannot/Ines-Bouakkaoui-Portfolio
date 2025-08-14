@@ -141,14 +141,32 @@ export default function WhatIDidSection({ items = [] }) {
                         />
                       ) : (
                         <>
-                          {/* Poster si fourni, sinon simple fond */}
+                          {/* Poster si fourni */}
                           {m.poster ? (
                             <img
                               src={m.poster}
                               alt={`${item.category} video ${idx + 1}`}
                               className="w-full h-full object-cover hover:cursor-pointer"
                             />
+                          ) : m.src.includes("youtube.com") ||
+                            m.src.includes("youtu.be") ? (
+                            // Miniature YouTube
+                            <img
+                              src={`https://img.youtube.com/vi/${
+                                m.src.includes("watch?v=")
+                                  ? new URL(m.src).searchParams.get("v")
+                                  : m.src.split("/").pop()
+                              }/hqdefault.jpg`}
+                              alt={`${item.category} video ${idx + 1}`}
+                              className="w-full h-full object-cover hover:cursor-pointer"
+                            />
+                          ) : m.src.includes("vimeo.com") ? (
+                            // Optionnel : miniature Vimeo (API requise)
+                            <div className="w-full h-full grid place-items-center bg-black/5 text-xs text-black/50">
+                              Vimeo video
+                            </div>
                           ) : (
+                            // Pas de poster ni miniature connue
                             <div className="w-full h-full grid place-items-center bg-black/5">
                               <span className="text-xs text-black/50">
                                 Video
