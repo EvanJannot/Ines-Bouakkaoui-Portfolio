@@ -98,17 +98,17 @@ export const PROJECTS = [
           "Contributed to scripting puzzle logic, including conditions for puzzle resolution, unlocking subsequent puzzles, and ensuring proper gameplay flow.",
         tag: ["Tech Design", "Tech Art"],
         media: [
-          banniereEnfantsLunes,
           {
-            type: "video",
-            src: "https://youtu.be/GO4FGZarfxo",
-          },
-          {
+            //Video demo laser dans le niveau test
             type: "video",
             src: "https://youtu.be/FwGjZGIe-u8",
             poster: banniereEnfantsLunes,
           },
-          { type: "image", src: banniereEnfantsLunes },
+          {
+            //Video demo laser dans le jeu
+            type: "video",
+            src: "https://youtu.be/wRVm_59AG9I",
+          },
         ],
       },
 
