@@ -11,8 +11,7 @@ import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
 import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
 
 export const PROJECTS = [
-
-  //Enfants-Lunes project  
+  //Enfants-Lunes project
   {
     //Card
     id: "enfants-lunes",
@@ -35,11 +34,31 @@ export const PROJECTS = [
     contextText:
       "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization. The player takes on the role of Leila, a young woman who seeks to escape to the surface after discovering a secret about her people.",
     team: [
-      "Nadia Rochdi — UI Designer, Cinematics",
-      "Noure Chafry — UI Artist, Level Designer",
-      "Adam Nasr — 3D Artist, Level Designer, Cinematics",
-      "Maxime Lefebvre - Music Compositor",
-      "Me — Generalist Designer, Tech Art, Cinematics",
+      {
+        name: "Nadia Rochdi",
+        linkedin: "",
+        roles: "UI Designer, Cinematics",
+      },
+      {
+        name: "Noure Chafry",
+        linkedin: "",
+        roles: "UI Artist, Level Designer",
+      },
+      {
+        name: "Adam Nasr",
+        linkedin: "",
+        roles: "3D Artist, Level Designer, Cinematics",
+      },
+      {
+        name: "Maxime Lefebvre",
+        linkedin: "",
+        roles: "Music Compositor",
+      },
+      {
+        name: "Me",
+        linkedin: "",
+        roles: "Generalist Designer, Tech Art, Cinematics",
+      },
     ],
     tools: ["Unreal Engine", "Blueprint", "Canva/Figma", "Miro", "Notion"],
 
@@ -74,7 +93,6 @@ export const PROJECTS = [
       { src: ELGameplay4, alt: "Gameplay 4" },
     ],
     whatIDidItems: [
-
       //Gameplay Mechanics
       {
         anchor: "gameplay-mechanics",
@@ -86,14 +104,11 @@ export const PROJECTS = [
           "Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location. \n" +
           "Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. \n" +
           "Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n" +
-
           "<strong>• Checkpoints </strong> \n" +
           "Developed respawn points, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, " +
           "and implemented camera fade-out transitions on respawn. \n \n" +
-
           "<strong>• Object grabbing :</strong> \n Scripted mechanics using Physics constraints for grabbing " +
           "objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning. \n\n" +
-
           "<strong>• Puzzles mechanics :</strong> \n" +
           "Contributed to scripting puzzle logic, including conditions for puzzle resolution, unlocking subsequent puzzles, and ensuring proper gameplay flow.",
         tag: ["Tech Design", "Tech Art"],
@@ -115,12 +130,13 @@ export const PROJECTS = [
       {
         anchor: "ia-enemies",
         category: "IA Enemies",
-        details: "Behavior Trees / spline-based patrols / player chase & capture / search & investigate / sound detection",
+        details:
+          "Behavior Trees / spline-based patrols / player chase & capture / search & investigate / sound detection",
         longText:
           "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n " +
           "Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n " +
           "Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
-        tag: ["Tech Design",],
+        tag: ["Tech Design"],
       },
 
       //Character & Animation
@@ -183,7 +199,7 @@ export const PROJECTS = [
           "Added spatialized sound effects for flames (placed by level artists in the level) and gear machinery to enhance environmental immersion. \n\n" +
           "Scripted the Audio Listener setup to ensure accurate spatial audio positioning relative to the player. \n\n" +
           "Implemented and scripted the sound effects for stamina refill, including playback during the refill process and a distinct sound at completion.",
-        tag: ["Tech Design",],
+        tag: ["Tech Design"],
       },
 
       //Debug
@@ -198,11 +214,10 @@ export const PROJECTS = [
           "Disabled player inputs during the introduction cinematic to maintain immersion. \n\n" +
           "Fixed the gear puzzle logic in the library’s Level Blueprint to ensure proper functionality. \n\n" +
           "Fixed the EU pipeline that was crashing the build.",
-        tag: ["Tech Design",],
+        tag: ["Tech Design"],
       },
     ],
   }, //Fin Enfants-Lunes
-
 
   // Projets Intégration d'animations
   {

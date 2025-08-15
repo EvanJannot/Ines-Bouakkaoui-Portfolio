@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function ContextSection({
   id = "context",
@@ -49,7 +50,16 @@ export default function ContextSection({
                 <h3 className="font-semibold mb-2 text-xl">Team</h3>
                 <ul className="space-y-1 text-sm">
                   {team.map((m, i) => (
-                    <li key={i}>{m}</li>
+                    <li key={i}>
+                      <a
+                        href={m.linkedin}
+                        target="_blank"
+                        className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-0"
+                      >
+                        {m.name + " "}
+                      </a>
+                      - {m.roles}
+                    </li>
                   ))}
                 </ul>
               </div>
