@@ -72,6 +72,10 @@ export const PROJECTS = [
     //Needs
     needs: [
       {
+        label: "Creation of a prototype game from scratch",
+        desc: null,
+      },
+      {
         label: "Game design and pitch (documentation)",
         desc: "we decided to go with a game without text, relying on visual storytelling and symbols.",
       },
