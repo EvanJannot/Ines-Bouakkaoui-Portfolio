@@ -43,12 +43,12 @@ export const PROJECTS = [
     team: [
       {
         name: "Nadia Rochdi",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/nadia-rochdi-795001295/",
         roles: "UI Designer, Cinematics",
       },
       {
         name: "Noure Chafry",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/nourechafry/",
         roles: "UI Artist, Level Designer",
       },
       {
@@ -58,12 +58,12 @@ export const PROJECTS = [
       },
       {
         name: "Maxime Lefebvre",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/maxime-lefebvre-938b57254/",
         roles: "Music Compositor",
       },
       {
         name: "Me",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/ines-bouakkaoui/",
         roles: "Generalist Designer, Tech Art, Cinematics",
       },
     ],
