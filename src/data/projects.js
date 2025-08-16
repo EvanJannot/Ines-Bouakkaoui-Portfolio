@@ -9,6 +9,13 @@ import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
 import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png";
 import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
 import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
+import BPLeila from "../assets/Enfants-Lunes/BP_Leila-EventGraph.png";
+import BPGrabObject from "../assets/Enfants-Lunes/BP_Leila-GrabObjectsGraph.png";
+import BPAIController from "../assets/Enfants-Lunes/AI_Controller_Gardes-EventGraph.png";
+import BPSensedActor from "../assets/Enfants-Lunes/AI_Controller_Gardes-CanSenseActor.png";
+import BPPatrolRoute from "../assets/Enfants-Lunes/BP_PatrolRoute-EventGraph.png";
+import BTEnemies from "../assets/Enfants-Lunes/BT_Gardes-Behavior Tree.png";
+import BTSubtreeEnemies from "../assets/Enfants-Lunes/BT_Subtree_SeekingState-Behavior Tree.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -101,16 +108,16 @@ export const PROJECTS = [
           "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
         longText:
           "<strong> • Laser refraction/emission : </strong> \n" +
-          "Designed and implemented laser mechanics in Blueprints : materials, spawners, emission/refraction surfaces based on hit location. \n" +
-          "Integrated into the character’s hand (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. \n" +
-          "Added event activation/deactivation through external objects, scripted stamina refill stations, and managed activation states. \n \n" +
-          "<strong>• Checkpoints </strong> \n" +
-          "Developed respawn points, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, " +
+          "Designed and implemented <strong>laser mechanics in Blueprints</strong> : materials, spawners, emission/refraction surfaces based on hit location. \n" +
+          "<strong>Integrated into the character’s hand</strong> (socket, added animation layer for aiming), aligned laser with camera movement, disabled camera-character collision for smoother control. \n" +
+          "<strong>Added event activation/deactivation</strong> through external objects, scripted stamina refill stations, and <strong>managed activation states.</strong> \n \n" +
+          "<strong>• Checkpoints : </strong> \n" +
+          "Developed <strong>respawn points</strong>, storing/restoring stamina on death, added kill volumes for out-of-bounds detection, " +
           "and implemented camera fade-out transitions on respawn. \n \n" +
-          "<strong>• Object grabbing :</strong> \n Scripted mechanics using Physics constraints for grabbing " +
-          "objects with constant direction, distance, and orientation relative to the player. Integrated grabbing animation layer and socket attachment for consistent positioning. \n\n" +
+          "<strong>• Object grabbing :</strong> \n Scripted mechanics <strong>using Physics constraints</strong> for grabbing " +
+          "objects with <strong>constant direction, distance, and orientation relative to the player.</strong> Integrated grabbing animation layer and socket attachment for consistent positioning. \n\n" +
           "<strong>• Puzzles mechanics :</strong> \n" +
-          "Contributed to scripting puzzle logic, including conditions for puzzle resolution, unlocking subsequent puzzles, and ensuring proper gameplay flow.",
+          "Contributed to <strong>scripting puzzle logic</strong>, including conditions for puzzle resolution, unlocking subsequent puzzles, and ensuring proper gameplay flow.",
         tag: ["Tech Design", "Tech Art"],
         media: [
           {
@@ -123,6 +130,20 @@ export const PROJECTS = [
             type: "video",
             src: "https://youtu.be/wRVm_59AG9I",
           },
+          BPLeila,
+
+          {
+            //Video demo des checkpoints & killvolume 
+            type: "video",
+            src: "https://youtu.be/Rr1VI_XE56I",
+          },
+
+          {
+            //Video demo du grab objects
+            type: "video",
+            src: "https://youtu.be/GZBp-W-4V_Q",
+          },
+          BPGrabObject,
         ],
       },
 
@@ -133,10 +154,24 @@ export const PROJECTS = [
         details:
           "Behavior Trees / spline-based patrols / player chase & capture / search & investigate / sound detection",
         longText:
-          "Designed and implemented enemy behaviors using Behavior Trees, enabling dynamic state transitions and decision-making. \n\n " +
-          "Blueprint of spline-based patrol paths, player chase on sight, and capture mechanics triggering respawn at the last checkpoint. \n\n " +
-          "Integrated loss-of-sight logic with Environment Queries for localized search behavior, and developed sound sensitivity systems to trigger investigation when noise is detected.",
+          "Designed and implemented <strong>enemy behaviors using Behavior Trees</strong>, enabling dynamic state transitions and decision-making. \n\n " +
+          "Blueprints of <strong>spline-based patrol paths</strong>, player chase on sight, and <strong>capture mechanics triggering respawn</strong> at the last checkpoint. \n\n " +
+          "Integrated <strong>loss-of-sight logic with Environment Queries for localized search behavior</strong>, and developed <strong>sound sensitivity</strong> systems to trigger investigation when noise is detected.",
         tag: ["Tech Design"],
+        media: [
+          {
+            //Video demo ennemis dans le niveau test
+            type: "video",
+            src: "https://youtu.be/f9BoEczklvY",
+          },
+          BPAIController,
+          BPSensedActor,
+          BTEnemies,
+          BTSubtreeEnemies,
+          BPPatrolRoute,
+        ]
+
+
       },
 
       //Character & Animation
