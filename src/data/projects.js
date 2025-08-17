@@ -9,6 +9,7 @@ import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
 import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png";
 import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
 import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
+// EL Gameplay
 import BPLeila from "../assets/Enfants-Lunes/BP_Leila-EventGraph.png";
 import BPGrabObject from "../assets/Enfants-Lunes/BP_Leila-GrabObjectsGraph.png";
 import BPAIController from "../assets/Enfants-Lunes/AI_Controller_Gardes-EventGraph.png";
@@ -16,6 +17,19 @@ import BPSensedActor from "../assets/Enfants-Lunes/AI_Controller_Gardes-CanSense
 import BPPatrolRoute from "../assets/Enfants-Lunes/BP_PatrolRoute-EventGraph.png";
 import BTEnemies from "../assets/Enfants-Lunes/BT_Gardes-Behavior Tree.png";
 import BTSubtreeEnemies from "../assets/Enfants-Lunes/BT_Subtree_SeekingState-Behavior Tree.png";
+// EL Char & Anim
+import ABPAnimGraph from "../assets/Enfants-Lunes/ABP_Leila-AnimGraph.png";
+import ABPEventGraph from "../assets/Enfants-Lunes/ABP_Leila-EventGraph.png";
+import StateMachine from "../assets/Enfants-Lunes/AnimGraphNode_StateMachine_1-Main States.png";
+import BPLeilaViewport from "../assets/Enfants-Lunes/BP_Leila_MeshAndFace.png";
+import Skeleton from "../assets/Enfants-Lunes/Sparrow_Skeleton_Outfit.PNG";
+import LeilaFace from "../assets/Enfants-Lunes/Leila_FaceMesh.png";
+//EL Shaders & Mat
+import ACOutliner from "../assets/Enfants-Lunes/AC_OutlinerEffect-EventGraph.png";
+import HiglightPosition from "../assets/Enfants-Lunes/Library_Gameplay-EventGraph.png";
+import WorldAlign from "../assets/Enfants-Lunes/MaterialGraph-M_WA_Base.png";
+import MLaser from "../assets/Enfants-Lunes/MaterialGraph-M_Laser.png";
+import MInstanceLaser from "../assets/Enfants-Lunes/MI_Laser.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -29,7 +43,7 @@ export const PROJECTS = [
     toolIcon: null,
     contextMedia: banniereEnfantsLunes,
     summary:
-      "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, Bugs fixing",
+      "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, UI",
     thumb: banniereEnfantsLunes,
 
     //Page
@@ -53,7 +67,7 @@ export const PROJECTS = [
       },
       {
         name: "Adam Nasr",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/adam-nasr-29a76434a/",
         roles: "3D Artist, Level Designer, Cinematics",
       },
       {
@@ -174,8 +188,6 @@ export const PROJECTS = [
           BTSubtreeEnemies,
           BPPatrolRoute,
         ]
-
-
       },
 
       //Character & Animation
@@ -186,13 +198,21 @@ export const PROJECTS = [
           "Metahuman creation & integration / rig & mesh modifications / animation retargeting & refinement / Animation Blueprint setup",
         longText:
           "<strong>• Character creation & Integration : </strong>" +
-          "\n Integration of the Sparrow asset from the Paragon franchise, modified the rig and mesh in Unreal Engine 5 to remove the face and unnecessary elements (bow, cape, etc.)." +
-          " Created a custom character by generating a Metahuman and masked neck area, and merged the Metahuman face onto the Sparrow rig in the Character Blueprint." +
+          "\n Integration of the Sparrow asset from the Paragon franchise, <strong>modified the rig and mesh in Unreal Engine 5</strong> to remove the face and unnecessary elements (bow, cape, etc.).\n" +
+          " Created a custom character by <strong>generating a Metahuman</strong> and masked neck area, and <strong>merged the Metahuman face onto the Sparrow rig in the Character Blueprint.</strong> \n" +
           "Adjusted ground shadow rendering (mesh bounds scale) and customized clothing material colors to align with the art direction. \n\n" +
-          "<strong>• Animation integration : </strong> \nImported animations from Mixamo, retargeted them to the custom rig, and refined facial animations for the Metahuman." +
-          "Corrected animation artifacts, created animation montages and layered animation sequences, and configured the Animation Blueprint (Anim Graph, Event Graph, and state machines)" +
+          "<strong>• Animation integration : </strong> \nImported animations from Mixamo, <strong>retargeted them to the custom rig</strong>, and refined facial animations for the Metahuman." +
+          "\nCorrected animation artifacts, created <strong>animation montages and layered animation sequences</strong>, and <strong>configured the Animation Blueprint</strong> (Anim Graph, Event Graph, and state machines)" +
           " for seamless gameplay integration.",
         tag: ["Tech Design", "Tech Art"],
+        media: [
+          ABPAnimGraph,
+          ABPEventGraph,
+          StateMachine,
+          BPLeilaViewport,
+          Skeleton,
+          LeilaFace,
+        ]
       },
 
       //Shaders & Materials
@@ -202,12 +222,26 @@ export const PROJECTS = [
         details:
           "Laser material / outline shader / placement indicator shader / reusable Actor Component / World Align material base",
         longText:
-          "Developed custom materials including a laser material, an outline shader for grabbable assets, and a placement indicator shader for object positioning. " +
+          "Developed custom materials including a <strong>laser material, an outline shader for grabbable assets, and a placement indicator shader for object positioning.</strong> " +
           "Scripted the triggering of the placement indicator in Level Blueprint \n\n" +
-          "Created a reusable Actor Component in Blueprint to automate shader application: automatically retrieved the mesh and its attached collision sphere, applied the appropriate " +
+          "Created a <strong>reusable Actor Component in Blueprint to automate shader application:</strong> automatically retrieved the mesh and its attached collision sphere, applied the appropriate " +
           "shader, and handled player-overlap events for interactive feedback. \n\n" +
-          "Created a World Align material base for the level artists.",
+          "Created a <strong>World Align material base</strong> for the level artists.",
         tag: ["Tech Design", "Tech Art"],
+        media: [
+          {
+            //Video demo utilisation outliner
+            type: "video",
+            src: "https://youtu.be/229KhZ-T9mM",
+          },
+          ACOutliner,
+          HiglightPosition,
+          WorldAlign,
+          MLaser,
+          MInstanceLaser,
+
+        ]
+
       },
 
       //Cinematics
@@ -252,7 +286,7 @@ export const PROJECTS = [
           "Corrected stamina UI animation behavior after a refill. \n\n" +
           "Disabled player inputs during the introduction cinematic to maintain immersion. \n\n" +
           "Fixed the gear puzzle logic in the library’s Level Blueprint to ensure proper functionality. \n\n" +
-          "Fixed the EU pipeline that was crashing the build.",
+          "Found out that the EU pipeline that was crashing the build. Figured out we have to delete it in the files when it is generated.",
         tag: ["Tech Design"],
       },
     ],
