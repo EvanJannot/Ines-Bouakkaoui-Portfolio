@@ -62,10 +62,9 @@ export const PROJECTS = [
 
     //Context
     contextText:
-      "Enfants-Lunes is a school project where our team had to design and prototype a game from scratch. " +
-      "The objective was to create a fully functional prototype, covering ideation, game design, and implementation within a limited timeframe. " +
-      "As part of this project, I contributed to both the technical and creative aspects. \n\n" +
-      "Enfants-Lunes is a third-person exploration and puzzle game set in a dystopian underground civilization." +
+      "Enfants-Lunes is a school project where our team had to <strong>design and prototype a game from scratch.</strong> " +
+      "The objective was to create a fully functional prototype, covering ideation, game design, and implementation within a limited timeframe. \n\n" +
+      "Enfants-Lunes is a <strong>third-person exploration and puzzle game</strong> set in a dystopian underground civilization." +
       "The player takes on the role of Leila, a young woman who seeks to escape to the surface after discovering a secret about her people.",
     team: [
       {

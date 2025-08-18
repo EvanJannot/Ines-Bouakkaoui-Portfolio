@@ -39,9 +39,12 @@ export default function ContextSection({
 
             {/* Texte de contexte */}
             {contextText ? (
-              <p className="text-sm text-black/80 leading-relaxed flex-1">
-                {contextText}
-              </p>
+              <p
+                className="text-sm text-black/80 leading-relaxed flex-1 whitespace-pre-line"
+                dangerouslySetInnerHTML={{
+                  __html: contextText,
+                }}
+              />
             ) : null}
 
             {/* Team / Tools */}
@@ -54,7 +57,7 @@ export default function ContextSection({
                       <a
                         href={m.linkedin}
                         target="_blank"
-                        className="hover:text-orange-400 transition-colors focus:outline-none focus:ring-0"
+                        className="font-semibold hover:text-orange-400 transition-colors focus:outline-none focus:ring-0"
                       >
                         {m.name + " "}
                       </a>
