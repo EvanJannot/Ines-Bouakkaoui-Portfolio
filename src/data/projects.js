@@ -30,6 +30,12 @@ import HiglightPosition from "../assets/Enfants-Lunes/Library_Gameplay-EventGrap
 import WorldAlign from "../assets/Enfants-Lunes/MaterialGraph-M_WA_Base.png";
 import MLaser from "../assets/Enfants-Lunes/MaterialGraph-M_Laser.png";
 import MInstanceLaser from "../assets/Enfants-Lunes/MI_Laser.png";
+//EL Cinematics
+import ScriptCinematic from "../assets/Enfants-Lunes/Library_Gameplay-EventGraph_Engrenages.png";
+//EL Sound integration
+import MainLevelSound from "../assets/Enfants-Lunes/Main_global-EventGraph.png";
+import BPRefillStamina from "../assets/Enfants-Lunes/BP_RefillStamina-EventGraph.png";
+import MSSLibrary from "../assets/Enfants-Lunes/MSS_Library-MetasoundEditorGraph.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -224,6 +230,7 @@ export const PROJECTS = [
         longText:
           "Developed custom materials including a <strong>laser material, an outline shader for grabbable assets, and a placement indicator shader for object positioning.</strong> " +
           "Scripted the triggering of the placement indicator in Level Blueprint \n\n" +
+          "Scripted the <strong>crystal behavior to gradually change its color when pointed at with the laser</strong>, providing visual feedback to the player.\n\n" +
           "Created a <strong>reusable Actor Component in Blueprint to automate shader application:</strong> automatically retrieved the mesh and its attached collision sphere, applied the appropriate " +
           "shader, and handled player-overlap events for interactive feedback. \n\n" +
           "Created a <strong>World Align material base</strong> for the level artists.",
@@ -251,14 +258,22 @@ export const PROJECTS = [
         details:
           "Level Blueprint triggers / tutorial door-opening / guard-blockade / library lever fix / crystal-door sequence / gear puzzle fix",
         longText:
-          "Scripted the triggering of cinematics within the Levels Blueprints to ensure seamless integration with gameplay events. \n\n" +
-          "Developed the door-opening cinematic triggered after solving the tutorial puzzle at the start of the game. \n\n" +
-          "Produced the guard-blockade cinematic in the library to visually communicate to the player that the main passage is blocked, prompting them to find an alternate path.\n\n" +
-          "Corrected the cinematic triggered after the player pulls the lever in the library. \n\n" +
-          "Designed the crystal-door cinematic, activated when the player fires the laser at the crystal long enough to unlock the path to the gear room. \n\n" +
-          "Improved the first gear puzzle cinematic by synchronizing sound with the falling object and fixing a bug where the gear could remain stuck, " +
+          "<strong>Scripted the triggering of cinematics</strong> within the Levels Blueprints to ensure seamless integration with gameplay events. \n\n" +
+          "Developed the <strong>door-opening cinematic</strong> triggered after solving the tutorial puzzle at the start of the game. \n\n" +
+          "Produced the <strong>guard-blockade cinematic</strong> in the library to visually communicate to the player that the main passage is blocked, prompting them to find an alternate path.\n\n" +
+          "Corrected the <strong>cinematic triggered after the player pulls the lever</strong> in the library. \n\n" +
+          "Designed the <strong>crystal-door cinematic</strong>, activated when the player fires the laser at the crystal long enough to unlock the path to the gear room. \n\n" +
+          "Improved the <strong>first gear puzzle cinematic</strong> by synchronizing sound with the falling object and fixing a bug where the gear could remain stuck, " +
           "ensuring consistent visual and audio feedback.",
         tag: ["Tech Design", "Tech Art"],
+        media: [
+          {
+            //Video demo cinematics
+            type: "video",
+            src: "https://youtu.be/p1LuvTpFyXc",
+          },
+          ScriptCinematic,
+        ]
       },
 
       //Sound integration
@@ -268,11 +283,20 @@ export const PROJECTS = [
         details:
           "Original soundtrack integration / ambient loops / spatialized flames & machinery / Audio Listener setup / stamina refill SFX",
         longText:
-          "Integrated original soundtrack composed by Maxime, working closely with him to implement ambient loops. \n\n" +
-          "Added spatialized sound effects for flames (placed by level artists in the level) and gear machinery to enhance environmental immersion. \n\n" +
-          "Scripted the Audio Listener setup to ensure accurate spatial audio positioning relative to the player. \n\n" +
-          "Implemented and scripted the sound effects for stamina refill, including playback during the refill process and a distinct sound at completion.",
+          "Integrated original soundtrack composed by Maxime, working closely with him to <strong>implement ambient loops.</strong> \n\n" +
+          "Added <strong>spatialized sound effects</strong> for flames (placed by level artists in the level) and gear machinery to enhance environmental immersion. \n\n" +
+          "Scripted the <strong>Audio Listener setup to ensure accurate spatial audio positioning relative to the player.</strong> \n\n" +
+          "<strong>Implemented and scripted the sound effects</strong>, like for stamina refill, including playback during the refill process and a distinct sound at completion.",
         tag: ["Tech Design"],
+        media: [
+          {
+            type: "video",
+            src: "https://youtu.be/Qj68UsJq3JA",
+          },
+          MainLevelSound,
+          BPRefillStamina,
+          MSSLibrary
+        ]
       },
 
       //Debug
