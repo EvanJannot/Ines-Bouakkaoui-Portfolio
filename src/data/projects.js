@@ -36,6 +36,9 @@ import ScriptCinematic from "../assets/Enfants-Lunes/Library_Gameplay-EventGraph
 import MainLevelSound from "../assets/Enfants-Lunes/Main_global-EventGraph.png";
 import BPRefillStamina from "../assets/Enfants-Lunes/BP_RefillStamina-EventGraph.png";
 import MSSLibrary from "../assets/Enfants-Lunes/MSS_Library-MetasoundEditorGraph.png";
+//EL Debug
+import RefillAnim from "../assets/Enfants-Lunes/WB_Stamina-EventGraph.png";
+import PipelineBug from "../assets/Enfants-Lunes/PieplineBug.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -306,12 +309,15 @@ export const PROJECTS = [
         details:
           "Interaction prompt fix / stamina UI fix / input lock in intro cinematic / gear puzzle fix / EU pipeline crash fix",
         longText:
-          "Fixed interaction feedback (“E” prompt) remaining on screen due to object trigger logic. \n\n" +
-          "Corrected stamina UI animation behavior after a refill. \n\n" +
+          "<strong>Fixed interaction feedback (“E” prompt)</strong> remaining on screen due to object trigger logic. \n\n" +
+          "Corrected <strong>stamina UI animation</strong> behavior after a refill. \n\n" +
           "Disabled player inputs during the introduction cinematic to maintain immersion. \n\n" +
-          "Fixed the gear puzzle logic in the library’s Level Blueprint to ensure proper functionality. \n\n" +
-          "Found out that the EU pipeline that was crashing the build. Figured out we have to delete it in the files when it is generated.",
+          "Found out that the <strong>UE pipeline was crashing the build.</strong> Figured out we have to delete it in the files when it is generated.",
         tag: ["Tech Design"],
+        media: [
+          RefillAnim,
+          PipelineBug,
+        ]
       },
     ],
   }, //Fin Enfants-Lunes
