@@ -38,7 +38,7 @@ import BPRefillStamina from "../assets/Enfants-Lunes/BP_RefillStamina-EventGraph
 import MSSLibrary from "../assets/Enfants-Lunes/MSS_Library-MetasoundEditorGraph.png";
 //EL Debug
 import RefillAnim from "../assets/Enfants-Lunes/WB_Stamina-EventGraph.png";
-import PipelineBug from "../assets/Enfants-Lunes/PieplineBug.png";
+import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
