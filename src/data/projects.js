@@ -38,7 +38,7 @@ import BPRefillStamina from "../assets/Enfants-Lunes/BP_RefillStamina-EventGraph
 import MSSLibrary from "../assets/Enfants-Lunes/MSS_Library-MetasoundEditorGraph.png";
 //EL Debug
 import RefillAnim from "../assets/Enfants-Lunes/WB_Stamina-EventGraph.png";
-import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.png";
+import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -327,6 +327,16 @@ export const PROJECTS = [
 
   // Projets Intégration d'animations
   {
+    id: "mosaic",
+    title: "Mosaic",
+    tags: ["Tech Art"],
+    points: ["Material", "Solo", "Substance Designer"],
+    engineIcon: substanceLogo,
+    toolIcon: unrealLogo,
+    summary: "Small resume of what I did",
+    thumb: "",
+  },
+  {
     id: "anim-integration",
     title: "Animation integration",
     tags: ["Tech Design", "Tech Art"],
@@ -346,16 +356,7 @@ export const PROJECTS = [
     summary: "Small resume of what I did",
     thumb: "",
   },
-  {
-    id: "mosaic",
-    title: "Mosaic",
-    tags: ["Tech Art"],
-    points: ["Material", "Solo", "Substance Designer"],
-    engineIcon: substanceLogo,
-    toolIcon: unrealLogo,
-    summary: "Small resume of what I did",
-    thumb: "",
-  },
+
   {
     id: "hyperconnected",
     title: "Hyperconnected",
