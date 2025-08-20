@@ -46,7 +46,7 @@ export default function ProjectSummaryCard({
           </ul>
 
           <p
-            className="text-sm text-black/70"
+            className="text-sm text-black/70 whitespace-pre-line"
             dangerouslySetInnerHTML={{
               __html: summary,
             }}

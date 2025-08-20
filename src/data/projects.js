@@ -40,6 +40,11 @@ import MSSLibrary from "../assets/Enfants-Lunes/MSS_Library-MetasoundEditorGraph
 import RefillAnim from "../assets/Enfants-Lunes/WB_Stamina-EventGraph.png";
 import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
+//Animation integration project
+
+
+//Mosaic project
+
 export const PROJECTS = [
   //Enfants-Lunes project
   {
@@ -52,7 +57,7 @@ export const PROJECTS = [
     toolIcon: null,
     contextMedia: banniereEnfantsLunes,
     summary:
-      "Gameplay mechanics (laser puzzles), IA Enemies, Character & Animation integration, Shaders, Cinematics, Sound integration, UI",
+      " - Gameplay mechanics (laser puzzles)\n - IA Enemies \n - Character & Animation integration \n - Shaders\n - Cinematics\n - Sound integration\n - Debug (UI)",
     thumb: banniereEnfantsLunes,
 
     //Page
@@ -93,7 +98,7 @@ export const PROJECTS = [
         roles: "Generalist Designer, Tech Art, Cinematics",
       },
     ],
-    tools: ["Unreal Engine", "Blueprint", "Canva/Figma", "Miro", "Notion"],
+    tools: ["Unreal Engine 5", "Blueprint", "Canva/Figma", "Miro", "Notion"],
 
     //Needs
     needs: [
@@ -327,6 +332,181 @@ export const PROJECTS = [
 
   // Projets Intégration d'animations
   {
+    id: "anim-integration",
+    title: "Animation integration",
+    tags: ["Tech Design", "Tech Art"],
+    points: ["Technical animation", "Solo", "Blueprint"],
+    engineIcon: unrealLogo,
+    toolIcon: null,
+    summary: "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n -Emotes \n - IK Rig",
+    thumb: "",
+
+    //Page
+    repoUrl: null,
+    duration: "School project - took 1 month",
+    year: "2024",
+
+    //Context
+    contextText:
+      " As a solo school project, I had to <strong> integrate and finalize an interactive character</strong> inside Unreal Engine 5. \n\n" +
+      "The project was split into two parts: \n" +
+      "• <strong> Part I : </strong> setting up <strong>idle animations, idle breakers, and locomotion</strong> (walk, run, sprint). \n" +
+      "• <strong> Part II : </strong> expanding with <strong>jumping, crouching, montages (attack + dances), custom emote</strong>, and <strong>IK feet placement</strong>. \n\n" +
+      "The goal was to learn how to <strong>set up an Animation Blueprint</strong>, handle transitions, and ensure smooth player feedback.",
+    team: [
+      {
+        name: "Me",
+        linkedin: "https://www.linkedin.com/in/ines-bouakkaoui/",
+        roles: "Tech Designer, Tech Art",
+      },
+    ],
+    tools: ["Unreal Engine 5", "Blueprint",],
+
+    //Needs
+    needs: [
+      {
+        label: "Idle & locomotion system",
+        desc: "implement idle states, random idle breakers, walk/run/sprint cycles with correct speeds and direction.",
+      },
+      {
+        label: "Expanded movements",
+        desc: "jumping with anticipation, falling logic, crouching toggle with proper capsule resizing.",
+      },
+      {
+        label: "Animation montages",
+        desc: "magical attack triggered on input, dance emotes triggered on a blueprint dance floor.",
+      },
+      {
+        label: "Polish & realism",
+        desc: "integrate IK rig for accurate foot placement on uneven ground.",
+      },
+      {
+        label: "Feedback & debugging",
+        desc: "show live print values (speed, direction, idle index, crouch state, etc.) and implement a debug mode for foot sliding.",
+      },
+    ],
+
+    //Results
+    resultsVideo: "",
+    resultsImages: [
+      { src: null, alt: "" },
+      { src: null, alt: "" },
+    ],
+
+    whatIDidItems: [
+      //Gameplay Mechanics
+      {
+        anchor: "idle-locomotion",
+        category: "Idle & locomotion",
+        details:
+          "Blendspace 2D / idle breakers / direction transitions ",
+        longText:
+          "• Created a <strong>Blendspace 2D</strong> mixing idle, walk, run, and sprint. \n\n" +
+
+          "• Integrated <strong>3 idle breakers</strong> triggered randomly after inactivity. \n\n" +
+
+          "• Configured speed thresholds (150 cm/s walk, 450 cm/s run, 600 cm/s sprint) and handled smooth direction transitions.",
+
+        tag: ["Tech Design", "Tech Art"],
+        media: [
+          {
+            //Video
+            type: "video",
+            src: "",
+          },
+
+        ],
+      },
+
+      //Animation montages & emotes
+      {
+        anchor: "anim-emotes",
+        category: "Animation montages & emotes",
+        details:
+          "Magic attack / dance floor Blueprint ",
+        longText:
+          "• Added a <strong>magical attack montage</strong> (upper body only, triggered with left click / controller trigger). \n\n" +
+
+          "• Created a <strong>dance floor Blueprint</strong> reusable with different dance animations and musics.",
+
+        tag: ["Tech Design", "Tech Art"],
+        media: [
+          {
+            //Video
+            type: "video",
+            src: "",
+          },
+
+        ],
+      },
+
+      //IK Rig foot placement
+      {
+        anchor: "ik-rig",
+        category: "IK Rig foot placement",
+        details:
+          "IK Rig (feet and pelvis)",
+        longText:
+          "• Implemented <strong>IK corrections</strong> for both feet and pelvis, ensuring the character adapts naturally to slopes and uneven terrain.",
+
+        tag: ["Tech Design", "Tech Art"],
+        media: [
+          {
+            //Video
+            type: "video",
+            src: "",
+          },
+
+        ],
+      },
+
+      //Jump & crouch mechanics
+      {
+        anchor: "mechanics",
+        category: "Jump & crouch mechanics",
+        details:
+          "IK Rig (feet and pelvis)",
+        longText:
+          "• Integrated <strong>jump states with anticipation delay for idle jumps</strong> and proper fall detection using <strong>OnLanded events</strong>. \n\n" +
+          "• Implemented <strong>crouch toggle</strong> with speed reduction and capsule resize.",
+
+        tag: ["Tech Design"],
+        media: [
+          {
+            //Video
+            type: "video",
+            src: "",
+          },
+
+        ],
+      },
+
+      //Inputs and debugs
+      {
+        anchor: "inputs-debug",
+        category: "Inputs & debugging",
+        details:
+          "Blendspace 2D / idle breakers / direction transitions ",
+        longText:
+          "• Added input mappings for <strong>Sprint</strong> and <strong>Debug toggle.</strong> \n\n" +
+
+          "• Scripted a <strong>PrintInfos function</strong> showing idle index, speed, direction, and inactivity timer.",
+
+        tag: ["Tech Design"],
+        media: [
+          {
+            //Video
+            type: "video",
+            src: "",
+          },
+
+        ],
+      },
+
+    ]
+  },
+
+  {
     id: "mosaic",
     title: "Mosaic",
     tags: ["Tech Art"],
@@ -336,16 +516,7 @@ export const PROJECTS = [
     summary: "Small resume of what I did",
     thumb: "",
   },
-  {
-    id: "anim-integration",
-    title: "Animation integration",
-    tags: ["Tech Design", "Tech Art"],
-    points: ["Technical animation", "Solo", "Blueprint"],
-    engineIcon: unrealLogo,
-    toolIcon: null,
-    summary: "Small resume of what I did",
-    thumb: "",
-  },
+
   {
     id: "viral-nebula",
     title: "Viral Nebula",
