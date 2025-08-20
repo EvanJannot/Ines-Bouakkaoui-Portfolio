@@ -28,7 +28,7 @@ export default function MyProjects() {
       {/* Titre style “pilule” */}
       <div className="flex justify-center mb-6 md:mb-8">
         <h2
-          className="px-6 md:px-10 py-2.5 md:py-3 rounded-full border-2 border-black bg-[#F7954A]
+          className="px-6 md:px-10 py-2.5 md:py-3 rounded-full border-2 border-black bg-[#FF914D]
           text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight
           whitespace-nowrap"
         >
