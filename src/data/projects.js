@@ -513,8 +513,129 @@ export const PROJECTS = [
     points: ["Material", "Solo", "Substance Designer"],
     engineIcon: substanceLogo,
     toolIcon: unrealLogo,
-    summary: "Small resume of what I did",
+    summary: "- Procedural material \n - Customizable wear parameters \n - Unreal Engine integration",
     thumb: "",
+
+    //Page
+    repoUrl: null,
+    duration: "School project - took 1 month",
+    year: "2025",
+
+    //Context
+    contextText:
+      "This mosaic is an individual school project for the Procedural Tools course. \n" +
+      "The objective was to create a <strong>procedural and parameterized material</strong> in Substance Designer, " +
+      "based on a tiling structure. The material had to include a <strong>global wear parameter and be fully customizable</strong>, " +
+      "then integrated into Unreal Engine 5 with both a normal and a deteriorated version.",
+    team: [
+      {
+        name: "Me",
+        linkedin: "https://www.linkedin.com/in/ines-bouakkaoui/",
+        roles: "Tech Art",
+      },
+    ],
+    tools: ["Substance Designer", "Unreal Engine",],
+
+    //Needs
+    needs: [
+      {
+        label: "Procedural tiling material",
+        desc: "build a mosaic-like material using Tile Sampler/Flood Fill nodes.",
+      },
+      {
+        label: "Wear parameter",
+        desc: "expose a global wear slider controlling cracks, chips and dirt buildup.",
+      },
+      {
+        label: "Intuitive customization",
+        desc: "provide at least 5 parameters such as color, size, variation and wear.",
+      },
+      {
+        label: "Integration in Unreal",
+        desc: "import the Substance graph and create normal and deteriorated instances.",
+      },
+      {
+        label: "Clean graph structure",
+        desc: "organize nodes with clear naming and comments.",
+      },
+    ],
+    whatIDidItems: [
+      //Pattern creation
+      {
+        anchor: "pattern",
+        category: "Pattern creation",
+        details:
+          "Tile Sampler & Flood Fill / procedural shapes / random variation",
+        longText:
+          "Created base patterns for the mosaic using Tile Sampler and Flood Fill. " +
+          "Designed multiple geometric tile shapes, with randomness in orientation, scale and distribution.",
+        tag: ["Tech Art"],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+        ],
+      },
+
+      //Procedural wear
+      {
+        anchor: "wear",
+        category: "Procedural wear",
+        details:
+          "Global wear parameter / cracks & chips / dirt accumulation",
+        longText:
+          "Implemented a global wear slider that simultaneously drives cracks, chipped edges and dirt masks, " +
+          "blending multiple effects for realistic progressive deterioration.",
+        tag: ["Tech Art"],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+        ],
+      },
+
+      //Parameters
+      {
+        anchor: "parameters",
+        category: "Parameters",
+        details:
+          "Main & secondary colors / wear intensity / variation",
+        longText:
+          "Exposed intuitive parameters: main color, secondary color, tile size, global wear and random variation. " +
+          "Grouped sliders with clear names to provide meaningful control for users.",
+        tag: ["Tech Art"],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+        ],
+      },
+
+      //Unreal Engine integration
+      {
+        anchor: "ue-integration",
+        category: "Unreal Engine integration",
+        details:
+          "Substance plugin import / material instances / normal & deteriorated versions",
+        longText:
+          "Imported the Substance material into UE5 via the plugin. Created two material instances: a normal clean mosaic and a deteriorated one. " +
+          "Tested parameters in-engine to ensure real-time customization.",
+        tag: ["Tech Art"],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+        ],
+      },
+    ],
   },
 
   {
