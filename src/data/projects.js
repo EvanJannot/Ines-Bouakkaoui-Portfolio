@@ -647,6 +647,119 @@ export const PROJECTS = [
     toolIcon: null,
     summary: "Small resume of what I did",
     thumb: "",
+
+    //Page
+    repoUrl: "https://github.com/inesbouakkaoui/Viral-Nebula",
+    duration: "School project - took 1 month",
+    year: "2024",
+
+    //Context
+    contextText:
+      "Viral Nebula is an individual school project for the Programming II course. The objective was to design and program a third-person survival " +
+      "game in Unity from scratch. \n" +
+      "The game takes place in a research spaceship contaminated by a spreading virus and haunted by a hostile biomechanical robot. " +
+      "The player must explore the ship, collect access codes, survive infected areas, and repair the central computer to win. ",
+    team: [
+      {
+        name: "Me",
+        linkedin: "https://www.linkedin.com/in/ines-bouakkaoui/",
+        roles: "Tech Design, Programmer",
+      },
+    ],
+    tools: ["Unity", "C#", "Visual Studio",],
+
+    //Needs
+    needs: [
+      {
+        label: "Game design documentation",
+        desc: "conception doc and player guide explaining world, goals, controls, enemies, items, and victory/defeat conditions.",
+      },
+      {
+        label: "Playable 3D environment",
+        desc: "spaceship with research rooms, control room, and safe decontamination zones.",
+      },
+      {
+        label: "Main character system",
+        desc: "third-person controller (CharacterController), animations (idle/run), footsteps sound, damage/death feedback.",
+      },
+      {
+        label: "NPC and enemies",
+        desc: "PNJ colleague with dialogue and scripted death by robot, biomechanical robots patrolling with NavMeshAgents, pursuing and attacking player.",
+      },
+      {
+        label: "Obstacles and dangers",
+        desc: "Contaminated rooms with countdown timer, locked control room door requiring 5 code fragments",
+      },
+      {
+        label: "Inventory system",
+        desc: "items to collect and use (mask recharge, health kits, codes).",
+      },
+      {
+        label: "Menus and game flow",
+        desc: "title screen, victory and defeat screens with sounds.",
+      },
+    ],
+
+    // What I did
+    whatIDidItems: [
+      {
+        anchor: "player-system",
+        category: "Player system",
+        details: "Character Controller / idle & run animations / footstep SFX / health & damage",
+        longText:
+          "• Implemented a third‑person <strong>Character Controller</strong> (movement, rotation, gravity). \n\n" +
+          "• Integrated <strong>idle</strong> and <strong>run</strong> animations with synchronized footstep SFX. \n\n" +
+          "• Built <strong>player health</strong> logic with damage feedback and death handling.",
+        tag: ["Programming", "Tech Design"],
+        media: [],
+      },
+      {
+        anchor: "environment-hazards",
+        category: "Environment & hazards",
+        details: "Spaceship layout / safe zones & infected rooms / timed contamination",
+        longText:
+          "• Constructed a compact spaceship environment from asset store with <strong>safe decontamination zones</strong> and " +
+          "<strong>infected rooms</strong> that apply damage on a <strong>countdown timer</strong>. \n\n" +
+          "• Added doors and blockers to clearly limit the play space.",
+        tag: ["Level Design", "Programming"],
+        media: [],
+      },
+      {
+        anchor: "npcs-enemies",
+        category: "NPCs & enemies",
+        details: "Friendly NPC interaction / NavMesh patrol & chase / attack behavior",
+        longText:
+          "• Scripted a <strong>friendly NPC</strong> (onboarding and narrative beat). \n\n" +
+          "• Implemented <strong>biomechanical robots</strong> using <strong>NavMesh</strong> for patrols, " +
+          "player detection, pursuit, and attack; tuned states to keep pressure while leaving escape windows.",
+        tag: ["AI", "Programming"],
+        media: [],
+      },
+      {
+        anchor: "items-inventory",
+        category: "Items & inventory",
+        details: "Collectibles (codes, health, mask recharges) / inventory UI / gated door",
+        longText:
+          "• Developed <strong>collectible items</strong> with on-pickup/use SFX: health kits, mask recharges, and " +
+          "<strong>five code digits</strong>. \n\n" +
+          "• Built an <strong>inventory UI</strong> to track quantities and " +
+          "gated the control room door to <strong>unlock after all five digits</strong> are collected.",
+        tag: ["UI", "Programming"],
+        media: [],
+      },
+      {
+        anchor: "flow-menus",
+        category: "Menus & game flow",
+        details: "Title / victory / defeat screens with audio transitions",
+        longText:
+          "• Created a <strong>title screen</strong> with looping theme, and <strong>victory/defeat</strong> screens " +
+          "that restart the game on input. \n\n" +
+          "• Wired audio transitions for clear state changes.",
+        tag: ["Programming"],
+        media: [],
+      },
+    ],
+
   },
 
   {

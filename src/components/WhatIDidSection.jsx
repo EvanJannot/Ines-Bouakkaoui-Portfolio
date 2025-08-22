@@ -97,7 +97,7 @@ export default function WhatIDidSection({ items = [] }) {
                         (t, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-0.5 text-xs rounded-full border border-black/60 bg-white"
+                            className="px-2 py-0.5 text-xs rounded-full border border-black/60 bg-[#fdf3ef]"
                           >
                             {t}
                           </span>
@@ -118,10 +118,10 @@ export default function WhatIDidSection({ items = [] }) {
               {media.length > 0 && (
                 <div
                   className={`grid gap-4 ${media.length === 1
-                      ? "grid-cols-1"
-                      : media.length === 2
-                        ? "grid-cols-2"
-                        : "grid-cols-2 md:grid-cols-3"
+                    ? "grid-cols-1"
+                    : media.length === 2
+                      ? "grid-cols-2"
+                      : "grid-cols-2 md:grid-cols-3"
                     }`}
                 >
                   {media.map((m, idx) => (
@@ -152,8 +152,8 @@ export default function WhatIDidSection({ items = [] }) {
                             // Miniature YouTube
                             <img
                               src={`https://img.youtube.com/vi/${m.src.includes("watch?v=")
-                                  ? new URL(m.src).searchParams.get("v")
-                                  : m.src.split("/").pop()
+                                ? new URL(m.src).searchParams.get("v")
+                                : m.src.split("/").pop()
                                 }/hqdefault.jpg`}
                               alt={`${item.category} video ${idx + 1}`}
                               className="w-full h-full object-cover hover:cursor-pointer"
