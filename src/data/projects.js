@@ -45,6 +45,13 @@ import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
 //Mosaic project
 import MosaicShowcase from "../assets/Mosaic/mosaic_showcase.png";
+import MosaicVersions from "../assets/Mosaic/mosaic_multiple_versions.png";
+import ShapesGraph from "../assets/Mosaic/shapes_graph.png";
+import MosaicGraph from "../assets/Mosaic/mosaic_graph.png";
+import Parameters1 from "../assets/Mosaic/parameters1.PNG";
+import Parameters2 from "../assets/Mosaic/parameters2.PNG";
+import Parameters3 from "../assets/Mosaic/parameters3.PNG";
+import Parameters4 from "../assets/Mosaic/parameters4.PNG";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -523,7 +530,7 @@ export const PROJECTS = [
     year: "2025",
 
     //Context
-    contextMedia: MosaicShowcase,
+    contextMedia: MosaicVersions,
     contextText:
       "This mosaic is an individual school project for the Procedural Tools course. \n" +
       "The objective was to create a <strong>procedural and parameterized material</strong> in Substance Designer, " +
@@ -561,6 +568,14 @@ export const PROJECTS = [
         desc: "organize nodes with clear naming and comments.",
       },
     ],
+
+    //Results
+    resultsVideo: "https://youtu.be/JqVL09kwadI",
+    resultsImages: [
+      { src: MosaicGraph, alt: "Mosaic graph" },
+      { src: ShapesGraph, alt: "Shapes Graph" },
+    ],
+
     whatIDidItems: [
       //Pattern creation
       {
@@ -573,11 +588,8 @@ export const PROJECTS = [
           "Designed multiple <strong>geometric tile shapes</strong>, with randomness in orientation, scale and distribution.",
         tag: ["Tech Art"],
         media: [
-          {
-            //Video demo
-            type: "video",
-            src: "",
-          },
+          ShapesGraph,
+          MosaicGraph,
         ],
       },
 
@@ -592,11 +604,7 @@ export const PROJECTS = [
           "blending multiple effects for realistic <strong>progressive deterioration.</strong>",
         tag: ["Tech Art"],
         media: [
-          {
-            //Video demo
-            type: "video",
-            src: "",
-          },
+          MosaicGraph,
         ],
       },
 
@@ -611,11 +619,10 @@ export const PROJECTS = [
           "Grouped sliders with <strong>clear names</strong> to provide meaningful <strong>control for users.</strong>",
         tag: ["Tech Art"],
         media: [
-          {
-            //Video demo
-            type: "video",
-            src: "",
-          },
+          Parameters1,
+          Parameters2,
+          Parameters3,
+          Parameters4,
         ],
       },
 
@@ -633,7 +640,7 @@ export const PROJECTS = [
           {
             //Video demo
             type: "video",
-            src: "",
+            src: "https://youtu.be/JqVL09kwadI",
           },
         ],
       },
