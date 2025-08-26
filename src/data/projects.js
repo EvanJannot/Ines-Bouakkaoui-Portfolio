@@ -44,6 +44,7 @@ import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
 
 //Mosaic project
+import MosaicShowcase from "../assets/Mosaic/mosaic_showcase.png";
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -140,7 +141,7 @@ export const PROJECTS = [
         anchor: "gameplay-mechanics",
         category: "Gameplay mechanics",
         details:
-          "Laser emission & refraction / scripted events / grabbing objects / puzzles mechanics ",
+          "Laser emission & refraction / checkpoints / scripted events / grabbing objects / puzzles mechanics ",
         longText:
           "<strong> • Laser refraction/emission : </strong> \n" +
           "Designed and implemented <strong>laser mechanics in Blueprints</strong> : materials, spawners, emission/refraction surfaces based on hit location. \n" +
@@ -338,7 +339,7 @@ export const PROJECTS = [
     points: ["Technical animation", "Solo", "Blueprint"],
     engineIcon: unrealLogo,
     toolIcon: null,
-    summary: "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n -Emotes \n - IK Rig",
+    summary: "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n - Emotes \n - IK Rig",
     thumb: "",
 
     //Page
@@ -514,7 +515,7 @@ export const PROJECTS = [
     engineIcon: substanceLogo,
     toolIcon: unrealLogo,
     summary: "- Procedural material \n - Customizable wear parameters \n - Unreal Engine integration",
-    thumb: "",
+    thumb: MosaicShowcase,
 
     //Page
     repoUrl: null,
@@ -522,6 +523,7 @@ export const PROJECTS = [
     year: "2025",
 
     //Context
+    contextMedia: MosaicShowcase,
     contextText:
       "This mosaic is an individual school project for the Procedural Tools course. \n" +
       "The objective was to create a <strong>procedural and parameterized material</strong> in Substance Designer, " +
@@ -567,8 +569,8 @@ export const PROJECTS = [
         details:
           "Tile Sampler & Flood Fill / procedural shapes / random variation",
         longText:
-          "Created base patterns for the mosaic using Tile Sampler and Flood Fill. " +
-          "Designed multiple geometric tile shapes, with randomness in orientation, scale and distribution.",
+          "Created <strong>base patterns</strong> for the mosaic using <strong>Tile Sampler and Flood Fill</strong>. \n" +
+          "Designed multiple <strong>geometric tile shapes</strong>, with randomness in orientation, scale and distribution.",
         tag: ["Tech Art"],
         media: [
           {
@@ -586,8 +588,8 @@ export const PROJECTS = [
         details:
           "Global wear parameter / cracks & chips / dirt accumulation",
         longText:
-          "Implemented a global wear slider that simultaneously drives cracks, chipped edges and dirt masks, " +
-          "blending multiple effects for realistic progressive deterioration.",
+          "Implemented a <strong>global wear slider</strong> that simultaneously <strong>drives cracks, chipped edges and dirt masks</strong>, " +
+          "blending multiple effects for realistic <strong>progressive deterioration.</strong>",
         tag: ["Tech Art"],
         media: [
           {
@@ -605,8 +607,8 @@ export const PROJECTS = [
         details:
           "Main & secondary colors / wear intensity / variation",
         longText:
-          "Exposed intuitive parameters: main color, secondary color, tile size, global wear and random variation. " +
-          "Grouped sliders with clear names to provide meaningful control for users.",
+          "<strong>Exposed intuitive parameters:</strong> main color, secondary color, tile size, global wear and random variation. \n" +
+          "Grouped sliders with <strong>clear names</strong> to provide meaningful <strong>control for users.</strong>",
         tag: ["Tech Art"],
         media: [
           {
@@ -624,8 +626,8 @@ export const PROJECTS = [
         details:
           "Substance plugin import / material instances / normal & deteriorated versions",
         longText:
-          "Imported the Substance material into UE5 via the plugin. Created two material instances: a normal clean mosaic and a deteriorated one. " +
-          "Tested parameters in-engine to ensure real-time customization.",
+          "<strong>Imported</strong> the Substance material <strong>into UE5</strong> via the plugin. Created two material instances: a normal clean mosaic and a deteriorated one. " +
+          "Tested parameters in-engine to ensure <strong>real-time customization.</strong>",
         tag: ["Tech Art"],
         media: [
           {
@@ -762,7 +764,7 @@ export const PROJECTS = [
 
   },
 
-  {
+  /*{
     id: "hyperconnected",
     title: "Hyperconnected",
     tags: ["Tech Design", "Tech Art"],
@@ -771,8 +773,8 @@ export const PROJECTS = [
     toolIcon: null,
     summary: "Small resume of what I did",
     thumb: "",
-  },
-  {
+  },*/
+  /*{
     id: "sand-rock",
     title: "Sand rock",
     tags: ["Tech Art"],
@@ -781,8 +783,8 @@ export const PROJECTS = [
     toolIcon: "",
     summary: "Small resume of what I did",
     thumb: "",
-  },
-  {
+  },*/
+  /*{
     id: "renaissance",
     title: "Renaissance",
     tags: ["Tech Design"],
@@ -791,7 +793,7 @@ export const PROJECTS = [
     toolIcon: null,
     summary: "Small resume of what I did",
     thumb: "",
-  },
+  },*/
   /*{
     id: "lucy",
     title: "Lucy",
