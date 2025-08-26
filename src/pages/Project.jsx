@@ -6,6 +6,7 @@ import Toc from "../components/Toc";
 import TocMobile from "../components/TocMobile";
 import ContextSection from "../components/ContextSection";
 import { FaGithub } from "react-icons/fa";
+import { FaItchIo } from "react-icons/fa6";
 import NeedsSection from "../components/NeedsSection";
 import ResultsSection from "../components/ResultsSection";
 import WhatIDidSection from "../components/WhatIDidSection";
@@ -69,6 +70,7 @@ export default function Project() {
     title,
     year,
     repoUrl,
+    itchioUrl,
     duration,
     contextText,
     team,
@@ -112,6 +114,18 @@ export default function Project() {
                   title="Open GitHub repository"
                 >
                   <FaGithub size={45} />
+                </a>
+              )}
+
+              {itchioUrl && (
+                <a
+                  href={itchioUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full text-black hover:bg-black hover:text-white transition-colors"
+                  title="Open Itch.io page"
+                >
+                  <FaItchIo size={45} />
                 </a>
               )}
             </div>

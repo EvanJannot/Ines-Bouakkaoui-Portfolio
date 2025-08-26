@@ -656,6 +656,7 @@ export const PROJECTS = [
 
     //Page
     repoUrl: "https://github.com/inesbouakkaoui/Viral-Nebula",
+    itchioUrl: "https://inhaya.itch.io/viral-nebula",
     duration: "School project - took 1 month",
     year: "2024",
 
