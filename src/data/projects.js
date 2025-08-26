@@ -42,6 +42,16 @@ import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
 //Animation integration project
 import animationThumb from "../assets/Animation-integration/animation_thumb.PNG";
+import DummyABP from "../assets/Animation-integration/ABP_Dummy-AnimGraph.png";
+import EventGraph_IdleBreakers from "../assets/Animation-integration/ABP_Dummy-EventGraph_IdleBreakers.png";
+import ABP_EventGraph from "../assets/Animation-integration/ABP_Dummy-EventGraph.png";
+import DummyStateMachine from "../assets/Animation-integration/AnimGraphNode_StateMachine_0-Locomotion.png";
+import dancefloor from "../assets/Animation-integration/BP_PisteDanse-EventGraph.png";
+import BP_Dummy from "../assets/Animation-integration/BP_ThirdPersonCharacter-EventGraph.png";
+import IdleBreakers from "../assets/Animation-integration/Idle_Breakers.PNG";
+import DummyAttackMontage from "../assets/Animation-integration/attack_anim_montage.PNG"
+import TrackingFeet from "../assets/Animation-integration/ABP_Dummy-TracagePieds.png";
+import PrintInfosFct from "../assets/Animation-integration/ABP_Dummy-PrintInfos.png";
 
 
 //Mosaic project
@@ -356,6 +366,7 @@ export const PROJECTS = [
     year: "2024",
 
     //Context
+    contextMedia: animationThumb,
     contextText:
       " As a solo school project, I had to <strong> integrate and finalize an interactive character</strong> inside Unreal Engine 5. \n\n" +
       "The project was split into two parts: \n" +
@@ -396,11 +407,7 @@ export const PROJECTS = [
     ],
 
     //Results
-    resultsVideo: "",
-    resultsImages: [
-      { src: null, alt: "" },
-      { src: null, alt: "" },
-    ],
+    resultsVideo: "https://youtu.be/rELvYJ1atFo",
 
     whatIDidItems: [
       //Gameplay Mechanics
@@ -421,8 +428,11 @@ export const PROJECTS = [
           {
             //Video
             type: "video",
-            src: "",
+            src: "https://youtu.be/H8IOdGG5qrE",
           },
+          IdleBreakers,
+          EventGraph_IdleBreakers,
+          DummyStateMachine,
 
         ],
       },
@@ -440,12 +450,9 @@ export const PROJECTS = [
 
         tag: ["Tech Design", "Tech Art"],
         media: [
-          {
-            //Video
-            type: "video",
-            src: "",
-          },
-
+          DummyAttackMontage,
+          dancefloor,
+          BP_Dummy,
         ],
       },
 
@@ -460,11 +467,9 @@ export const PROJECTS = [
 
         tag: ["Tech Design", "Tech Art"],
         media: [
-          {
-            //Video
-            type: "video",
-            src: "",
-          },
+          DummyABP,
+          ABP_EventGraph,
+          TrackingFeet,
 
         ],
       },
@@ -474,19 +479,15 @@ export const PROJECTS = [
         anchor: "mechanics",
         category: "Jump & crouch mechanics",
         details:
-          "IK Rig (feet and pelvis)",
+          "Anticipation delays for jumps / crouch toggle",
         longText:
-          "• Integrated <strong>jump states with anticipation delay for idle jumps</strong> and proper fall detection using <strong>OnLanded events</strong>. \n\n" +
+          "• Integrated <strong>jump states with anticipation delay for jumps</strong> and proper fall detection using <strong>OnLanded events</strong>. \n\n" +
           "• Implemented <strong>crouch toggle</strong> with speed reduction and capsule resize.",
 
         tag: ["Tech Design"],
         media: [
-          {
-            //Video
-            type: "video",
-            src: "",
-          },
-
+          BP_Dummy,
+          StateMachine,
         ],
       },
 
@@ -503,12 +504,7 @@ export const PROJECTS = [
 
         tag: ["Tech Design"],
         media: [
-          {
-            //Video
-            type: "video",
-            src: "",
-          },
-
+          PrintInfosFct,
         ],
       },
 
@@ -655,7 +651,7 @@ export const PROJECTS = [
     points: ["Survival Game", "Solo", "C#"],
     engineIcon: unityLogo,
     toolIcon: null,
-    summary: "Small resume of what I did",
+    summary: "Page under construction (content available here and on github, playable on itch.io, just missing medias!)",
     thumb: "",
 
     //Page
