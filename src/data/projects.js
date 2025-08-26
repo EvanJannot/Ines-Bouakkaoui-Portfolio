@@ -64,6 +64,34 @@ import Parameters2 from "../assets/Mosaic/parameters2.PNG";
 import Parameters3 from "../assets/Mosaic/parameters3.PNG";
 import Parameters4 from "../assets/Mosaic/parameters4.PNG";
 
+//Viral Nebula Project
+import viralNebulaThumb from "../assets/Viral-Nebula/viralNebula_thumb.PNG";
+import AIPatrol1 from "../assets/Viral-Nebula/AIPatrol1.PNG";
+import AIPatrol2 from "../assets/Viral-Nebula/AIPatrol2.PNG";
+import AIPatrol3 from "../assets/Viral-Nebula/AIPatrol3.PNG";
+import VN_Enemy from "../assets/Viral-Nebula/Enemy.PNG";
+import gestionjoueur1 from "../assets/Viral-Nebula/gestionjoueur1.PNG";
+import gestionjoueur2 from "../assets/Viral-Nebula/gestionjoueur2.PNG";
+import inventaire1 from "../assets/Viral-Nebula/inventaire1.PNG";
+import inventaire2 from "../assets/Viral-Nebula/inventaire2.PNG";
+import inventaire3 from "../assets/Viral-Nebula/inventaire3.PNG";
+import menus1 from "../assets/Viral-Nebula/menus1.PNG";
+import menus2 from "../assets/Viral-Nebula/menus2.PNG";
+import screenTitle from "../assets/Viral-Nebula/screenTitle.PNG";
+import gameOver from "../assets/Viral-Nebula/gameOver.PNG";
+import winScreen from "../assets/Viral-Nebula/winScreen.PNG";
+import VN_PNJ from "../assets/Viral-Nebula/PNJ.PNG";
+import PNJScript1 from "../assets/Viral-Nebula/PNJScript1.PNG";
+import PNJScript2 from "../assets/Viral-Nebula/PNJScript2.PNG";
+import PP_animationScript from "../assets/Viral-Nebula/PP_animationScript.PNG";
+import PP_animator from "../assets/Viral-Nebula/PP_Animator.PNG";
+import PP from "../assets/Viral-Nebula/PP.PNG";
+import PP2 from "../assets/Viral-Nebula/PP2.PNG";
+import zoneInfectee from "../assets/Viral-Nebula/zoneInfectee.PNG";
+import zoneInfecteeScript1 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
+import zoneInfecteeScript2 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
+
+
 export const PROJECTS = [
   //Enfants-Lunes project
   {
@@ -644,6 +672,7 @@ export const PROJECTS = [
     ],
   },
 
+  // Projet 4 Viral Nebula
   {
     id: "viral-nebula",
     title: "Viral Nebula",
@@ -652,7 +681,7 @@ export const PROJECTS = [
     engineIcon: unityLogo,
     toolIcon: null,
     summary: "Page under construction (content available here and on github, playable on itch.io, just missing medias!)",
-    thumb: "",
+    thumb: viralNebulaThumb,
 
     //Page
     repoUrl: "https://github.com/inesbouakkaoui/Viral-Nebula",
@@ -661,11 +690,13 @@ export const PROJECTS = [
     year: "2024",
 
     //Context
+    contextMedia: viralNebulaThumb,
     contextText:
-      "Viral Nebula is an individual school project for the Programming II course. The objective was to design and program a third-person survival " +
-      "game in Unity from scratch. \n" +
+      "Viral Nebula is an individual school project for the Programming II course. The objective was to <strong>design and program a third-person survival " +
+      "game in Unity</strong> from scratch. \n" +
       "The game takes place in a research spaceship contaminated by a spreading virus and haunted by a hostile biomechanical robot. " +
-      "The player must explore the ship, collect access codes, survive infected areas, and repair the central computer to win. ",
+      "The player must explore the ship, <strong>collect access codes, survive infected areas, and repair the central computer to win.</strong> \n\n" +
+      "It is my first 3D completed game!",
     team: [
       {
         name: "Me",
@@ -707,6 +738,9 @@ export const PROJECTS = [
       },
     ],
 
+    //Results
+    resultsVideo: "https://youtu.be/BB0sozdjrbk",
+
     // What I did
     whatIDidItems: [
       {
@@ -718,7 +752,18 @@ export const PROJECTS = [
           "• Integrated <strong>idle</strong> and <strong>run</strong> animations with synchronized footstep SFX. \n\n" +
           "• Built <strong>player health</strong> logic with damage feedback and death handling.",
         tag: ["Programming", "Tech Design"],
-        media: [],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+          PP2,
+          PP_animator,
+          PP_animationScript,
+          gestionjoueur1,
+          gestionjoueur2,
+        ],
       },
       {
         anchor: "environment-hazards",
@@ -726,33 +771,62 @@ export const PROJECTS = [
         details: "Spaceship layout / safe zones & infected rooms / timed contamination",
         longText:
           "• Constructed a compact spaceship environment from asset store with <strong>safe decontamination zones</strong> and " +
-          "<strong>infected rooms</strong> that apply damage on a <strong>countdown timer</strong>. \n\n" +
-          "• Added doors and blockers to clearly limit the play space.",
+          "<strong>infected rooms</strong> that kills player after <strong>countdown timer</strong>. \n\n" +
+          "• Added doors and blockers to limit the play space.",
         tag: ["Level Design", "Programming"],
-        media: [],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+          zoneInfectee,
+          zoneInfecteeScript1,
+          zoneInfecteeScript2,
+
+        ],
       },
       {
-        anchor: "npcs-enemies",
-        category: "NPCs & enemies",
+        anchor: "npc-enemies",
+        category: "NPC & enemies",
         details: "Friendly NPC interaction / NavMesh patrol & chase / attack behavior",
         longText:
           "• Scripted a <strong>friendly NPC</strong> (onboarding and narrative beat). \n\n" +
           "• Implemented <strong>biomechanical robots</strong> using <strong>NavMesh</strong> for patrols, " +
           "player detection, pursuit, and attack; tuned states to keep pressure while leaving escape windows.",
         tag: ["AI", "Programming"],
-        media: [],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+          VN_Enemy,
+          AIPatrol2,
+          VN_PNJ,
+          PNJScript2,
+        ],
       },
       {
         anchor: "items-inventory",
         category: "Items & inventory",
         details: "Collectibles (codes, health, mask recharges) / inventory UI / gated door",
         longText:
-          "• Developed <strong>collectible items</strong> with on-pickup/use SFX: health kits, mask recharges, and " +
-          "<strong>five code digits</strong>. \n\n" +
+          "• Developed <strong>collectible items</strong> with on-pickup/use SFX: <strong>health kits, mask recharges, and " +
+          "five code digits</strong>. \n\n" +
           "• Built an <strong>inventory UI</strong> to track quantities and " +
           "gated the control room door to <strong>unlock after all five digits</strong> are collected.",
         tag: ["UI", "Programming"],
-        media: [],
+        media: [
+          {
+            //Video demo
+            type: "video",
+            src: "",
+          },
+          inventaire3,
+          inventaire1,
+          inventaire2,
+        ],
       },
       {
         anchor: "flow-menus",
@@ -763,7 +837,13 @@ export const PROJECTS = [
           "that restart the game on input. \n\n" +
           "• Wired audio transitions for clear state changes.",
         tag: ["Programming"],
-        media: [],
+        media: [
+          screenTitle,
+          gameOver,
+          winScreen,
+          menus1,
+          menus2,
+        ],
       },
     ],
 
