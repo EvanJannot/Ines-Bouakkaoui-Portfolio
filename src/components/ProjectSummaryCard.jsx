@@ -11,12 +11,12 @@ export default function ProjectSummaryCard({
   return (
     <article className="relative rounded-xl border border-black/30 bg-[#F6D0BB] shadow-[0_4px_0_#00000033] p-4 md:p-5 flex flex-col">
       {/* vignette */}
-      <div className="aspect-[4/3] rounded-md bg-white/60 border border-black/10 grid place-items-center mb-4">
+      <div className="aspect-[4/3] rounded-md bg-white/60 border border-black/10 overflow-hidden mb-4">
         {thumb && (
           <img
             src={thumb}
             alt={`${title} thumbnail`}
-            className="w-full h-full object-cover rounded-md"
+            className="w-full h-full object-cover"
           />
         )}
       </div>
