@@ -680,7 +680,7 @@ export const PROJECTS = [
     points: ["Survival Game", "Solo", "C#"],
     engineIcon: unityLogo,
     toolIcon: null,
-    summary: "Page under construction (content available here and on github, playable on itch.io, just missing medias!)",
+    summary: "- Player system \n - Environment & hazards \n - NPC & Enemies \n - Items & inventory \n - Menus & game flow",
     thumb: viralNebulaThumb,
 
     //Page
@@ -749,14 +749,14 @@ export const PROJECTS = [
         details: "Character Controller / idle & run animations / footstep SFX / health & damage",
         longText:
           "• Implemented a third‑person <strong>Character Controller</strong> (movement, rotation, gravity). \n\n" +
-          "• Integrated <strong>idle</strong> and <strong>run</strong> animations with synchronized footstep SFX. \n\n" +
+          "• Integrated <strong>animations</strong> as idle and run animations with synchronized footstep SFX. \n\n" +
           "• Built <strong>player health</strong> logic with damage feedback and death handling.",
         tag: ["Programming", "Tech Design"],
         media: [
           {
             //Video demo
             type: "video",
-            src: "",
+            src: "https://youtu.be/vQmv-UlPv9A",
           },
           PP2,
           PP_animator,
@@ -778,7 +778,7 @@ export const PROJECTS = [
           {
             //Video demo
             type: "video",
-            src: "",
+            src: "https://youtu.be/WfpU01Uv49w",
           },
           zoneInfectee,
           zoneInfecteeScript1,
@@ -793,13 +793,14 @@ export const PROJECTS = [
         longText:
           "• Scripted a <strong>friendly NPC</strong> (onboarding and narrative beat). \n\n" +
           "• Implemented <strong>biomechanical robots</strong> using <strong>NavMesh</strong> for patrols, " +
-          "player detection, pursuit, and attack; tuned states to keep pressure while leaving escape windows.",
+          "player detection, pursuit, and attack; tuned states to keep pressure while leaving escape windows.\n\n" +
+          "Enemies <strong>can't attack the player</strong> in the <strong>safe decontamination zones.</strong>",
         tag: ["AI", "Programming"],
         media: [
           {
             //Video demo
             type: "video",
-            src: "",
+            src: "https://youtu.be/G_DHnfVenaE",
           },
           VN_Enemy,
           AIPatrol2,
@@ -821,7 +822,7 @@ export const PROJECTS = [
           {
             //Video demo
             type: "video",
-            src: "",
+            src: "https://youtu.be/2NXc_c5RG5o",
           },
           inventaire3,
           inventaire1,
