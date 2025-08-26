@@ -20,10 +20,10 @@ function normalizeMedia(item) {
       typeof m === "string"
         ? { type: isVideoSrc(m) ? "video" : "image", src: m }
         : {
-          type: m.type ?? (isVideoSrc(m.src) ? "video" : "image"),
-          src: m.src,
-          poster: m.poster,
-        }
+            type: m.type ?? (isVideoSrc(m.src) ? "video" : "image"),
+            src: m.src,
+            poster: m.poster,
+          }
     );
   }
   if (Array.isArray(item.images) && item.images.length) {
@@ -80,6 +80,7 @@ export default function WhatIDidSection({ items = [] }) {
       {/* Détails ancrés */}
       {items.map((item, i) => {
         const media = normalizeMedia(item);
+        const single = media.length === 1;
         return (
           <article
             key={item.anchor || `${i}-${item.category}-detail`}
@@ -90,7 +91,9 @@ export default function WhatIDidSection({ items = [] }) {
               {/* Texte */}
               <div className="bg-[#FDF3EF] rounded-xl border border-black/10 p-5 md:p-6 relative">
                 <header className="mb-3 flex items-start justify-between">
-                  <h3 className="text-lg font-semibold text-[#0A47B1]">{item.category}</h3>
+                  <h3 className="text-lg font-semibold text-[#0A47B1]">
+                    {item.category}
+                  </h3>
                   {item.tag && (
                     <div className="flex flex-wrap gap-2">
                       {(Array.isArray(item.tag) ? item.tag : [item.tag]).map(
@@ -117,19 +120,27 @@ export default function WhatIDidSection({ items = [] }) {
               {/* Galerie dynamique image/vidéo */}
               {media.length > 0 && (
                 <div
-                  className={`grid gap-4 ${media.length === 1
-                    ? "grid-cols-1"
-                    : media.length === 2
+                  className={`grid gap-4 ${
+                    media.length === 1
+                      ? "grid-cols-1"
+                      : media.length === 2
                       ? "grid-cols-2"
                       : "grid-cols-2 md:grid-cols-3"
-                    }`}
+                  }`}
                 >
                   {media.map((m, idx) => (
                     <button
                       type="button"
                       key={idx}
                       onClick={() => openMedia(m)}
-                      className="group relative aspect-square rounded-lg border border-black/10 bg-white/60 overflow-hidden focus:outline-none focus:ring-2 focus:ring-black"
+                      className={[
+                        "group relative rounded-lg border border-black/10 bg-white/60 overflow-hidden focus:outline-none focus:ring-2 focus:ring-black",
+                        single
+                          ? // ↓ quand seul: ratio + CAP de hauteur + évite de prendre toute la colonne
+                            "aspect-[4/3] md:aspect-video max-h-72 md:max-h-80 place-self-start"
+                          : // ↓ sinon: tuiles carrées
+                            "aspect-square",
+                      ].join(" ")}
                       title="Open media"
                     >
                       {m.type === "image" ? (
@@ -151,10 +162,11 @@ export default function WhatIDidSection({ items = [] }) {
                             m.src.includes("youtu.be") ? (
                             // Miniature YouTube
                             <img
-                              src={`https://img.youtube.com/vi/${m.src.includes("watch?v=")
-                                ? new URL(m.src).searchParams.get("v")
-                                : m.src.split("/").pop()
-                                }/hqdefault.jpg`}
+                              src={`https://img.youtube.com/vi/${
+                                m.src.includes("watch?v=")
+                                  ? new URL(m.src).searchParams.get("v")
+                                  : m.src.split("/").pop()
+                              }/hqdefault.jpg`}
                               alt={`${item.category} video ${idx + 1}`}
                               className="w-full h-full object-cover hover:cursor-pointer"
                             />
@@ -224,8 +236,8 @@ export default function WhatIDidSection({ items = [] }) {
                       current.src.includes("embed")
                         ? current.src
                         : current.src
-                          .replace("watch?v=", "embed/")
-                          .replace("youtu.be/", "youtube.com/embed/")
+                            .replace("watch?v=", "embed/")
+                            .replace("youtu.be/", "youtube.com/embed/")
                     }
                     title="video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -241,9 +253,9 @@ export default function WhatIDidSection({ items = [] }) {
                       current.src.includes("player.vimeo.com")
                         ? current.src
                         : current.src.replace(
-                          "vimeo.com/",
-                          "player.vimeo.com/video/"
-                        )
+                            "vimeo.com/",
+                            "player.vimeo.com/video/"
+                          )
                     }
                     title="video"
                     allow="autoplay; fullscreen; picture-in-picture"
