@@ -41,6 +41,7 @@ import RefillAnim from "../assets/Enfants-Lunes/WB_Stamina-EventGraph.png";
 import PipelineBug from "../assets/Enfants-Lunes/PipelineBug.PNG";
 
 //Animation integration project
+import animationThumb from "../assets/Animation-integration/animation_thumb.PNG";
 
 
 //Mosaic project
@@ -338,7 +339,7 @@ export const PROJECTS = [
     ],
   }, //Fin Enfants-Lunes
 
-  // Projets Intégration d'animations
+  // Projet 2 : Intégration d'animations
   {
     id: "anim-integration",
     title: "Animation integration",
@@ -347,7 +348,7 @@ export const PROJECTS = [
     engineIcon: unrealLogo,
     toolIcon: null,
     summary: "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n - Emotes \n - IK Rig",
-    thumb: "",
+    thumb: animationThumb,
 
     //Page
     repoUrl: null,
