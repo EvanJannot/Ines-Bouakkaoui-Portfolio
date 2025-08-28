@@ -49,10 +49,9 @@ import DummyStateMachine from "../assets/Animation-integration/AnimGraphNode_Sta
 import dancefloor from "../assets/Animation-integration/BP_PisteDanse-EventGraph.png";
 import BP_Dummy from "../assets/Animation-integration/BP_ThirdPersonCharacter-EventGraph.png";
 import IdleBreakers from "../assets/Animation-integration/Idle_Breakers.PNG";
-import DummyAttackMontage from "../assets/Animation-integration/attack_anim_montage.PNG"
+import DummyAttackMontage from "../assets/Animation-integration/attack_anim_montage.PNG";
 import TrackingFeet from "../assets/Animation-integration/ABP_Dummy-TracagePieds.png";
 import PrintInfosFct from "../assets/Animation-integration/ABP_Dummy-PrintInfos.png";
-
 
 //Mosaic project
 import MosaicShowcase from "../assets/Mosaic/mosaic_showcase.png";
@@ -90,7 +89,6 @@ import PP2 from "../assets/Viral-Nebula/PP2.PNG";
 import zoneInfectee from "../assets/Viral-Nebula/zoneInfectee.PNG";
 import zoneInfecteeScript1 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
 import zoneInfecteeScript2 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
-
 
 export const PROJECTS = [
   //Enfants-Lunes project
@@ -215,7 +213,7 @@ export const PROJECTS = [
           BPLeila,
 
           {
-            //Video demo des checkpoints & killvolume 
+            //Video demo des checkpoints & killvolume
             type: "video",
             src: "https://youtu.be/Rr1VI_XE56I",
           },
@@ -251,7 +249,7 @@ export const PROJECTS = [
           BTEnemies,
           BTSubtreeEnemies,
           BPPatrolRoute,
-        ]
+        ],
       },
 
       //Character & Animation
@@ -276,7 +274,7 @@ export const PROJECTS = [
           BPLeilaViewport,
           Skeleton,
           LeilaFace,
-        ]
+        ],
       },
 
       //Shaders & Materials
@@ -304,9 +302,7 @@ export const PROJECTS = [
           WorldAlign,
           MLaser,
           MInstanceLaser,
-
-        ]
-
+        ],
       },
 
       //Cinematics
@@ -331,7 +327,7 @@ export const PROJECTS = [
             src: "https://youtu.be/p1LuvTpFyXc",
           },
           ScriptCinematic,
-        ]
+        ],
       },
 
       //Sound integration
@@ -353,8 +349,8 @@ export const PROJECTS = [
           },
           MainLevelSound,
           BPRefillStamina,
-          MSSLibrary
-        ]
+          MSSLibrary,
+        ],
       },
 
       //Debug
@@ -369,10 +365,7 @@ export const PROJECTS = [
           "Disabled player inputs during the introduction cinematic to maintain immersion. \n\n" +
           "Found out that the <strong>UE pipeline was crashing the build.</strong> Figured out we have to delete it in the files when it is generated.",
         tag: ["Tech Design"],
-        media: [
-          RefillAnim,
-          PipelineBug,
-        ]
+        media: [RefillAnim, PipelineBug],
       },
     ],
   }, //Fin Enfants-Lunes
@@ -385,7 +378,8 @@ export const PROJECTS = [
     points: ["Technical animation", "Solo", "Blueprint"],
     engineIcon: unrealLogo,
     toolIcon: null,
-    summary: "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n - Emotes \n - IK Rig",
+    summary:
+      "- Idle & locomotion system\n - Inputs & movements\n - Animation montages \n - Emotes \n - IK Rig",
     thumb: animationThumb,
 
     //Page
@@ -408,7 +402,7 @@ export const PROJECTS = [
         roles: "Tech Designer, Tech Art",
       },
     ],
-    tools: ["Unreal Engine 5", "Blueprint",],
+    tools: ["Unreal Engine 5", "Blueprint"],
 
     //Needs
     needs: [
@@ -442,13 +436,10 @@ export const PROJECTS = [
       {
         anchor: "idle-locomotion",
         category: "Idle & locomotion",
-        details:
-          "Blendspace 2D / idle breakers / direction transitions ",
+        details: "Blendspace 2D / idle breakers / direction transitions ",
         longText:
           "• Created a <strong>Blendspace 2D</strong> mixing idle, walk, run, and sprint. \n\n" +
-
           "• Integrated <strong>3 idle breakers</strong> triggered randomly after inactivity. \n\n" +
-
           "• Configured speed thresholds (150 cm/s walk, 450 cm/s run, 600 cm/s sprint) and handled smooth direction transitions.",
 
         tag: ["Tech Design", "Tech Art"],
@@ -461,7 +452,6 @@ export const PROJECTS = [
           IdleBreakers,
           EventGraph_IdleBreakers,
           DummyStateMachine,
-
         ],
       },
 
@@ -469,74 +459,53 @@ export const PROJECTS = [
       {
         anchor: "anim-emotes",
         category: "Animation montages & emotes",
-        details:
-          "Magic attack / dance floor Blueprint ",
+        details: "Magic attack / dance floor Blueprint ",
         longText:
           "• Added a <strong>magical attack montage</strong> (upper body only, triggered with left click / controller trigger). \n\n" +
-
           "• Created a <strong>dance floor Blueprint</strong> reusable with different dance animations and musics.",
 
         tag: ["Tech Design", "Tech Art"],
-        media: [
-          DummyAttackMontage,
-          dancefloor,
-          BP_Dummy,
-        ],
+        media: [DummyAttackMontage, dancefloor, BP_Dummy],
       },
 
       //IK Rig foot placement
       {
         anchor: "ik-rig",
         category: "IK Rig foot placement",
-        details:
-          "IK Rig (feet and pelvis)",
+        details: "IK Rig (feet and pelvis)",
         longText:
           "• Implemented <strong>IK corrections</strong> for both feet and pelvis, ensuring the character adapts naturally to slopes and uneven terrain.",
 
         tag: ["Tech Design", "Tech Art"],
-        media: [
-          DummyABP,
-          ABP_EventGraph,
-          TrackingFeet,
-
-        ],
+        media: [DummyABP, ABP_EventGraph, TrackingFeet],
       },
 
       //Jump & crouch mechanics
       {
         anchor: "mechanics",
         category: "Jump & crouch mechanics",
-        details:
-          "Anticipation delays for jumps / crouch toggle",
+        details: "Anticipation delays for jumps / crouch toggle",
         longText:
           "• Integrated <strong>jump states with anticipation delay for jumps</strong> and proper fall detection using <strong>OnLanded events</strong>. \n\n" +
           "• Implemented <strong>crouch toggle</strong> with speed reduction and capsule resize.",
 
         tag: ["Tech Design"],
-        media: [
-          BP_Dummy,
-          StateMachine,
-        ],
+        media: [BP_Dummy, StateMachine],
       },
 
       //Inputs and debugs
       {
         anchor: "inputs-debug",
         category: "Inputs & debugging",
-        details:
-          "Blendspace 2D / idle breakers / direction transitions ",
+        details: "Blendspace 2D / idle breakers / direction transitions ",
         longText:
           "• Added input mappings for <strong>Sprint</strong> and <strong>Debug toggle.</strong> \n\n" +
-
           "• Scripted a <strong>PrintInfos function</strong> showing idle index, speed, direction, and inactivity timer.",
 
         tag: ["Tech Design"],
-        media: [
-          PrintInfosFct,
-        ],
+        media: [PrintInfosFct],
       },
-
-    ]
+    ],
   },
 
   {
@@ -546,7 +515,8 @@ export const PROJECTS = [
     points: ["Material", "Solo", "Substance Designer"],
     engineIcon: substanceLogo,
     toolIcon: unrealLogo,
-    summary: "- Procedural material \n - Customizable wear parameters \n - Unreal Engine integration",
+    summary:
+      "- Procedural material \n - Customizable wear parameters \n - Unreal Engine integration",
     thumb: MosaicShowcase,
 
     //Page
@@ -568,7 +538,7 @@ export const PROJECTS = [
         roles: "Tech Art",
       },
     ],
-    tools: ["Substance Designer", "Unreal Engine",],
+    tools: ["Substance Designer", "Unreal Engine"],
 
     //Needs
     needs: [
@@ -612,43 +582,31 @@ export const PROJECTS = [
           "Created <strong>base patterns</strong> for the mosaic using <strong>Tile Sampler and Flood Fill</strong>. \n" +
           "Designed multiple <strong>geometric tile shapes</strong>, with randomness in orientation, scale and distribution.",
         tag: ["Tech Art"],
-        media: [
-          ShapesGraph,
-          MosaicGraph,
-        ],
+        media: [ShapesGraph, MosaicGraph],
       },
 
       //Procedural wear
       {
         anchor: "wear",
         category: "Procedural wear",
-        details:
-          "Global wear parameter / cracks & chips / dirt accumulation",
+        details: "Global wear parameter / cracks & chips / dirt accumulation",
         longText:
           "Implemented a <strong>global wear slider</strong> that simultaneously <strong>drives cracks, chipped edges and dirt masks</strong>, " +
           "blending multiple effects for realistic <strong>progressive deterioration.</strong>",
         tag: ["Tech Art"],
-        media: [
-          MosaicGraph,
-        ],
+        media: [MosaicGraph],
       },
 
       //Parameters
       {
         anchor: "parameters",
         category: "Parameters",
-        details:
-          "Main & secondary colors / wear intensity / variation",
+        details: "Main & secondary colors / wear intensity / variation",
         longText:
           "<strong>Exposed intuitive parameters:</strong> main color, secondary color, tile size, global wear and random variation. \n" +
           "Grouped sliders with <strong>clear names</strong> to provide meaningful <strong>control for users.</strong>",
         tag: ["Tech Art"],
-        media: [
-          Parameters1,
-          Parameters2,
-          Parameters3,
-          Parameters4,
-        ],
+        media: [Parameters1, Parameters2, Parameters3, Parameters4],
       },
 
       //Unreal Engine integration
@@ -680,7 +638,8 @@ export const PROJECTS = [
     points: ["Survival Game", "Solo", "C#"],
     engineIcon: unityLogo,
     toolIcon: null,
-    summary: "- Player system \n - Environment & hazards \n - NPC & Enemies \n - Items & inventory \n - Menus & game flow",
+    summary:
+      "- Player system \n - Environment & hazards \n - NPC & Enemies \n - Items & inventory \n - Menus & game flow",
     thumb: viralNebulaThumb,
 
     //Page
@@ -704,7 +663,7 @@ export const PROJECTS = [
         roles: "Tech Design, Programmer",
       },
     ],
-    tools: ["Unity", "C#", "Visual Studio",],
+    tools: ["Unity", "C#", "Visual Studio"],
 
     //Needs
     needs: [
@@ -746,7 +705,8 @@ export const PROJECTS = [
       {
         anchor: "player-system",
         category: "Player system",
-        details: "Character Controller / idle & run animations / footstep SFX / health & damage",
+        details:
+          "Character Controller / idle & run animations / footstep SFX / health & damage",
         longText:
           "• Implemented a third‑person <strong>Character Controller</strong> (movement, rotation, gravity). \n\n" +
           "• Integrated <strong>animations</strong> as idle and run animations with synchronized footstep SFX. \n\n" +
@@ -768,7 +728,8 @@ export const PROJECTS = [
       {
         anchor: "environment-hazards",
         category: "Environment & hazards",
-        details: "Spaceship layout / safe zones & infected rooms / timed contamination",
+        details:
+          "Spaceship layout / safe zones & infected rooms / timed contamination",
         longText:
           "• Constructed a compact spaceship environment from asset store with <strong>safe decontamination zones</strong> and " +
           "<strong>infected rooms</strong> that kills player after <strong>countdown timer</strong>. \n\n" +
@@ -783,13 +744,13 @@ export const PROJECTS = [
           zoneInfectee,
           zoneInfecteeScript1,
           zoneInfecteeScript2,
-
         ],
       },
       {
         anchor: "npc-enemies",
         category: "NPC & enemies",
-        details: "Friendly NPC interaction / NavMesh patrol & chase / attack behavior",
+        details:
+          "Friendly NPC interaction / NavMesh patrol & chase / attack behavior",
         longText:
           "• Scripted a <strong>friendly NPC</strong> (onboarding and narrative beat). \n\n" +
           "• Implemented <strong>biomechanical robots</strong> using <strong>NavMesh</strong> for patrols, " +
@@ -811,7 +772,8 @@ export const PROJECTS = [
       {
         anchor: "items-inventory",
         category: "Items & inventory",
-        details: "Collectibles (codes, health, mask recharges) / inventory UI / gated door",
+        details:
+          "Collectibles (codes, health, mask recharges) / inventory UI / gated door",
         longText:
           "• Developed <strong>collectible items</strong> with on-pickup/use SFX: <strong>health kits, mask recharges, and " +
           "five code digits</strong>. \n\n" +
@@ -838,16 +800,9 @@ export const PROJECTS = [
           "that restart the game on input. \n\n" +
           "• Wired audio transitions for clear state changes.",
         tag: ["Programming"],
-        media: [
-          screenTitle,
-          gameOver,
-          winScreen,
-          menus1,
-          menus2,
-        ],
+        media: [screenTitle, gameOver, winScreen, menus1, menus2],
       },
     ],
-
   },
 
   /*{
