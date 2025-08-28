@@ -19,7 +19,7 @@ export default function AboutMe() {
     { id: "about-me", label: "About me" },
     { id: "my-skills", label: "My Skills" },
     { id: "industry-involvement", label: "Industry Involvement" },
-    { id: "tech-exploration", label: "Tech Exploration" },
+    //{ id: "tech-exploration", label: "Tech Exploration" },
   ];
   return (
     <>
@@ -47,7 +47,7 @@ export default function AboutMe() {
 
             <IndustryInvolvmentSection title="Industry Involvment" />
 
-            <TechExplorationSection title="Tech Exploration" />
+            {/*<TechExplorationSection title="Tech Exploration" />*/}
           </div>
         </div>
       </div>
