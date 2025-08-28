@@ -112,20 +112,36 @@ function MainVideo({ videoUrl }) {
   if (!videoUrl) {
     return (
       <div className="aspect-video max-w-5xl mx-auto rounded-lg bg-white/60 border border-black/10 grid place-items-center mt-10">
-        <span className="text-sm text-black/50">Video placeholder</span>
+        <span className="text-sm text-black/50">Image placeholder</span>
       </div>
     );
   }
 
   const isMp4 = /\.mp4($|\?)/i.test(videoUrl);
+  const isImage = /\.(jpg|jpeg|png|gif|webp)$/i.test(videoUrl);
 
-  return isMp4 ? (
-    <video
-      src={videoUrl}
-      controls
-      className="w-full max-w-5xl mx-auto aspect-video rounded-lg border border-black/10 bg-black"
-    />
-  ) : (
+  if (isMp4) {
+    return (
+      <video
+        src={videoUrl}
+        controls
+        className="w-full max-w-5xl mx-auto aspect-video rounded-lg border border-black/10 bg-black"
+      />
+    );
+  }
+
+  if (isImage) {
+    return (
+      <img
+        src={videoUrl}
+        alt="Main illustration"
+        className="w-full max-w-5xl mx-auto aspect-video rounded-lg border border-black/10 object-cover"
+      />
+    );
+  }
+
+  // sinon, on suppose que c'est une URL de vidéo externe (YouTube, Vimeo…)
+  return (
     <div className="relative w-full max-w-6xl mx-auto aspect-video overflow-hidden rounded-lg border border-black/10">
       <iframe
         src={toEmbedUrl(videoUrl)}
