@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import photo_pro from "../assets/about/Photo_professionnelle.jpg";
 
 export default function AboutMeSection({
   id = "about-me",
   title = "About me",
   contextText = "I am a curious and dedicated technical game designer and technical artist. Formerly a chemist with laboratory experience, these experiences gave me a rigorous work ethic and allowed me to develop my analytical skills, which I now apply to video games.", // string
-  media, // url image
+  media = photo_pro,
   mediaAlt = "Project media",
 }) {
   const [open, setOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function AboutMeSection({
       <div className="grid gap-6 md:grid-cols-12 items-stretch">
         {/* Média gauche */}
         <div className="md:col-span-5">
-          <div className="rounded-lg border border-black/10 bg-white/60 aspect-video overflow-hidden grid place-items-center h-full">
+          <div className="rounded-lg border border-black/10 bg-white/60 h-[450px] overflow-hidden"> {/* Pour Evan : J'ai modifié ici le CSS (h-450) */}
             {media ? (
               <button
                 type="button"
@@ -33,10 +34,11 @@ export default function AboutMeSection({
                 aria-label="Open image"
                 title="Click to enlarge"
               >
+                {/* Pour Evan : J'ai modifié ici le CSS [object-position:center_10%] */}
                 <img
                   src={media}
                   alt={mediaAlt}
-                  className="w-full h-full object-cover hover:cursor-pointer"
+                  className="w-full h-full object-cover [object-position:center_10%] hover:cursor-pointer"
                   loading="lazy"
                 />
               </button>

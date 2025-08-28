@@ -1,19 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
-import ELGameplay1 from "../assets/Enfants-Lunes/EL_Gameplay1.png";
-import ELGameplay2 from "../assets/Enfants-Lunes/EL_Gameplay2.png";
-import ELGameplay3 from "../assets/Enfants-Lunes/EL_Gameplay3.png";
-import ELGameplay4 from "../assets/Enfants-Lunes/EL_Gameplay4.png";
+
+
 export default function IndustryInvolvmentSection({
   id = "needs",
   title = "Needs",
   contextText = "As a project coordinator for <strong>Femmes+ en Tech</strong>, I contributed to the organization of <strong>14 company visits</strong> (127 participants), <strong>6 creative competitions</strong> (83 participants), and <strong>major networking events</strong> like Rendez-vous en Tech that gathered <strong>200+ participants.</strong> I also contributed to run <strong>midi-causeries (Lunch & Learn)</strong> with professionals, <strong>giving students a safe space to exchange about careers and industry challenges.</strong> These initiatives allowed us to build strong connections with studios such as Moment Factory, Indie Asylum, Desjardins and CAE, while <strong>promoting diversity and inclusion in the tech ecosystem.</strong>", // string
-  videoUrl = "https://youtu.be/JqVL09kwadI",
+  videoUrl = "",
   images = [
-    { src: ELGameplay1, alt: "Gameplay 1" },
+    /*{ src: ELGameplay1, alt: "Gameplay 1" },
     { src: ELGameplay2, alt: "Gameplay 2" },
     { src: ELGameplay3, alt: "Gameplay 3" },
-    { src: ELGameplay4, alt: "Gameplay 4" },
+    { src: ELGameplay4, alt: "Gameplay 4" },*/
   ],
 }) {
   const thumbs = useMemo(() => images.filter(Boolean).slice(0, 4), [images]);

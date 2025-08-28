@@ -2,32 +2,34 @@ import { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+import softwares_logos from "../assets/about/softwares_logos.png";
+
 export default function MySkillsSection({
   id = "about-me",
   title = "About me",
   items = [
     {
-      label: "Game engines :",
+      label: "Game engines ",
       desc: "Unreal Engines, Unity",
     },
     {
-      label: "Scripting :",
+      label: "Scripting ",
       desc: "Visual Scripting (Blueprints), C#",
     },
     {
-      label: "Visual content :",
+      label: "Visual content ",
       desc: "Suite Adobe (Photoshop, After Effects, Illustrator, Premiere).",
     },
     {
-      label: "Tools :",
+      label: "Tools ",
       desc: "Figma, Trello, Jira, Github.",
     },
     {
-      label: "Languages :",
+      label: "Languages ",
       desc: "French (native), English (professional)",
     },
   ],
-  media, // url image
+  media = softwares_logos,
   mediaAlt = "Project media",
 }) {
   const [open, setOpen] = useState(false);
@@ -72,7 +74,7 @@ export default function MySkillsSection({
         </div>
         {/* Média droite */}
         <div className="md:col-span-5">
-          <div className="rounded-lg border border-black/10 bg-white/60 aspect-video overflow-hidden grid place-items-center h-full">
+          <div className="rounded-lg border border-black/10 bg-[#FFF3EF]/60 aspect-video overflow-hidden grid place-items-center h-full">
             {media ? (
               <button
                 type="button"
