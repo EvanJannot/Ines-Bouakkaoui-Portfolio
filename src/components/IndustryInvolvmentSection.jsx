@@ -1,13 +1,37 @@
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
 
+import RDVtech from "../assets/about/RDV-en-tech.jpg";
+import MF1 from "../assets/about/moment-factory1.JPG";
+import MF2 from "../assets/about/moment-factory2.JPG";
+import MF3 from "../assets/about/moment-factory3.JPG";
+import IndieAsylum1 from "../assets/about/indie-asylum1.jpg";
+import IndieAsylum2 from "../assets/about/indie-asylum2.jpg";
+import PHI from "../assets/about/centre-PHI.jpg";
+import SAT1 from "../assets/about/SAT1.jpg";
+import SAT2 from "../assets/about/SAT2.JPG";
+import HQ1 from "../assets/about/hydro-quebec1.jpeg";
+import HQ2 from "../assets/about/hydro-quebec2.jpeg";
+
+
+
 
 export default function IndustryInvolvmentSection({
   id = "needs",
   title = "Needs",
   contextText = "As a project coordinator for <strong>Femmes+ en Tech</strong>, I contributed to the organization of <strong>14 company visits</strong> (127 participants), <strong>6 creative competitions</strong> (83 participants), and <strong>major networking events</strong> like Rendez-vous en Tech that gathered <strong>200+ participants.</strong> I also contributed to run <strong>midi-causeries (Lunch & Learn)</strong> with professionals, <strong>giving students a safe space to exchange about careers and industry challenges.</strong> These initiatives allowed us to build strong connections with studios such as Moment Factory, Indie Asylum, Desjardins and CAE, while <strong>promoting diversity and inclusion in the tech ecosystem.</strong>", // string
-  videoUrl = "",
+  videoUrl = RDVtech,
   images = [
+    MF1,
+    MF2,
+    MF3,
+    IndieAsylum1,
+    IndieAsylum2,
+    PHI,
+    SAT1,
+    SAT2,
+    HQ1,
+    HQ2,
     /*{ src: ELGameplay1, alt: "Gameplay 1" },
     { src: ELGameplay2, alt: "Gameplay 2" },
     { src: ELGameplay3, alt: "Gameplay 3" },
