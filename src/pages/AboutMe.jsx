@@ -47,7 +47,7 @@ export default function AboutMe() {
 
             <IndustryInvolvmentSection title="Industry Involvment" />
 
-            <TechExplorationSection title="Tech Exploration" />
+            {/* <TechExplorationSection title="Tech Exploration" /> */}
           </div>
         </div>
       </div>
