@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import softwares_logos from "../assets/about/softwares_logos.png";
 
 export default function MySkillsSection({
-  id = "about-me",
   title = "About me",
   items = [
     {
@@ -43,7 +42,7 @@ export default function MySkillsSection({
   }, [open]);
 
   return (
-    <section id={id} className="scroll-mt-28 mt-8">
+    <section id="my-skills" className="scroll-mt-28 mt-8">
       <div className="grid gap-6 md:grid-cols-12 items-stretch">
         {/* Carte gauche */}
         <div className="md:col-span-7 flex">

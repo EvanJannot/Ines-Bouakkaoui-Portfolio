@@ -13,25 +13,21 @@ import SAT2 from "../assets/about/SAT2.JPG";
 import HQ1 from "../assets/about/hydro-quebec1.jpeg";
 import HQ2 from "../assets/about/hydro-quebec2.jpeg";
 
-
-
-
 export default function IndustryInvolvmentSection({
-  id = "needs",
-  title = "Needs",
+  title = "Industry Involvment",
   contextText = "As a project coordinator for <strong>Femmes+ en Tech</strong>, I contributed to the organization of <strong>14 company visits</strong> (127 participants), <strong>6 creative competitions</strong> (83 participants), and <strong>major networking events</strong> like Rendez-vous en Tech that gathered <strong>200+ participants.</strong> I also contributed to run <strong>midi-causeries (Lunch & Learn)</strong> with professionals, <strong>giving students a safe space to exchange about careers and industry challenges.</strong> These initiatives allowed us to build strong connections with studios such as Moment Factory, Indie Asylum, Desjardins and CAE, while <strong>promoting diversity and inclusion in the tech ecosystem.</strong>", // string
   videoUrl = RDVtech,
   images = [
-    { src: MF1},
-    { src: MF2},
-    { src: MF3},
-    { src: IndieAsylum1},
-    { src: IndieAsylum2},
-    { src: PHI},
-    { src: SAT1},
-    { src: SAT2},
-    { src: HQ1},
-    { src: HQ2},
+    { src: MF1 },
+    { src: MF2 },
+    { src: MF3 },
+    { src: IndieAsylum1 },
+    { src: IndieAsylum2 },
+    { src: PHI },
+    { src: SAT1 },
+    { src: SAT2 },
+    { src: HQ1 },
+    { src: HQ2 },
     /*{ src: ELGameplay1, alt: "Gameplay 1" },
     { src: ELGameplay2, alt: "Gameplay 2" },
     { src: ELGameplay3, alt: "Gameplay 3" },
@@ -55,7 +51,7 @@ export default function IndustryInvolvmentSection({
     return () => window.removeEventListener("keydown", onKey);
   }, [lightboxIdx, thumbs.length]);
   return (
-    <section id={id} className="scroll-mt-28 mt-8">
+    <section id="industry-involvement" className="scroll-mt-28 mt-8">
       <div className="rounded-xl bg-[#FFF3EF] p-5 md:p-6 shadow-sm border border-black/10 mb-10">
         <h2 className="text-xl font-semibold mb-3">{title}</h2>
 

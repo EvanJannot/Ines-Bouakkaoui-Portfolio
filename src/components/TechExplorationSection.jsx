@@ -3,8 +3,7 @@ import { HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export default function TechExplorationSection({
-  id = "about-me",
-  title = "About me",
+  title = "Tech Exploration",
   topText = "I actively explore new technologies to understand their potential and spark creative ideas :",
   bottomText = "These experiences help me develop my skills and stay on top of new trends.",
   items = [
@@ -32,7 +31,7 @@ export default function TechExplorationSection({
   }, [open]);
 
   return (
-    <section id={id} className="scroll-mt-28 mt-8">
+    <section id="tech-exploration" className="scroll-mt-28 mt-8">
       <div className="grid gap-6 md:grid-cols-12 items-stretch">
         {/* Carte gauche */}
         <div className="md:col-span-7 flex">
@@ -42,12 +41,9 @@ export default function TechExplorationSection({
             </div>
 
             <p
-              className="text-sm text-black/80 leading-relaxed flex-1 whitespace-pre-line"
-              dangerouslySetInnerHTML={{
-                __html: topText,
-              }}
+              className="text-sm text-black/80 leading-relaxed whitespace-pre-line mb-4"
+              dangerouslySetInnerHTML={{ __html: topText }}
             />
-
             {/* Texte de contexte */}
             <ul className="list-disc list-inside space-y-2 text-sm leading-relaxed">
               {items.map((it, i) => {
@@ -65,12 +61,9 @@ export default function TechExplorationSection({
                 );
               })}
             </ul>
-
             <p
-              className="text-sm text-black/80 leading-relaxed flex-1 whitespace-pre-line"
-              dangerouslySetInnerHTML={{
-                __html: bottomText,
-              }}
+              className="text-sm text-black/80 leading-relaxed whitespace-pre-line mt-4"
+              dangerouslySetInnerHTML={{ __html: bottomText }}
             />
           </div>
         </div>
