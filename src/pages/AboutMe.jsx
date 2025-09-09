@@ -19,7 +19,6 @@ export default function AboutMe() {
     { id: "about-me", label: "About me" },
     { id: "my-skills", label: "My Skills" },
     { id: "industry-involvement", label: "Industry Involvement" },
-    { id: "tech-exploration", label: "Tech Exploration" },
   ];
   return (
     <>
