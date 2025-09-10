@@ -1,4 +1,5 @@
 import unrealLogo from "../assets/UnrealLogo.png";
+import unityLogo from "../assets/UnityLogo.png";
 import rightImage from "../assets/HomePicture.svg";
 
 export default function HeroSection() {
@@ -21,7 +22,7 @@ export default function HeroSection() {
 
         {/* Rôles */}
         <div className="flex gap-3 sm:gap-4 md:gap-8 flex-wrap">
-          {["technical designer", "technical artist", "programmer"].map(
+          {["Technical Game Designer",].map(
             (role) => (
               <p
                 key={role}
@@ -38,6 +39,11 @@ export default function HeroSection() {
           <img
             src={unrealLogo}
             alt="Unreal Engine"
+            className="w-32 h-16 md:w-60 md:h-32 object-contain"
+          />
+          <img
+            src={unityLogo}
+            alt="Unity"
             className="w-32 h-16 md:w-60 md:h-32 object-contain"
           />
         </div>
