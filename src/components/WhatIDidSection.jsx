@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { HiX, HiPlay } from "react-icons/hi";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 function isVideoSrc(src = "") {
   const lower = src.toLowerCase();
@@ -207,7 +208,7 @@ export default function WhatIDidSection({ items = [] }) {
           onClick={close}
         >
           <div
-            className="relative max-w-6xl w-full"
+            className="relative w-screen h-screen md:w-auto md:h-auto max-w-[98vw] max-h-[98vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
@@ -221,15 +222,56 @@ export default function WhatIDidSection({ items = [] }) {
 
             <div className="bg-black/10 rounded-lg overflow-hidden p-0 md:p-2">
               {current.type === "image" ? (
-                <img
-                  src={current.src}
-                  alt="media"
-                  className="max-h-[80vh] w-auto mx-auto object-contain"
-                />
+                <TransformWrapper
+                  minScale={0.5}
+                  maxScale={8}
+                  initialScale={1}
+                  centerOnInit
+                  doubleClick={{ mode: "zoomIn", step: 0.8 }}
+                  wheel={{ step: 0.15 }}
+                  pinch={{ step: 0.15 }}
+                  wrapperClass="w-[98vw] h-[94vh] mx-auto rounded-lg overflow-hidden bg-black/5"
+                  contentClass="w-fit h-fit"
+                  limitToBounds={true}
+                  boundsPadding={0.9}
+                >
+                  {({ zoomIn, zoomOut, resetTransform }) => (
+                    <>
+                      {/* Boutons de contrôle */}
+                      <div className="absolute top-3 left-3 z-[101] flex gap-2">
+                        <button
+                          onClick={() => zoomIn()}
+                          className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                        >
+                          +
+                        </button>
+                        <button
+                          onClick={() => zoomOut()}
+                          className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                        >
+                          −
+                        </button>
+                        <button
+                          onClick={() => resetTransform()}
+                          className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                        >
+                          Reset
+                        </button>
+                      </div>
+                      <TransformComponent>
+                        <img
+                          src={current.src}
+                          alt="media"
+                          className="max-h-[80vh] w-auto mx-auto object-contain"
+                        />
+                      </TransformComponent>
+                    </>
+                  )}
+                </TransformWrapper>
               ) : current.src.includes("youtube") ||
                 current.src.includes("youtu.be") ? (
                 // YouTube embed
-                <div className="w-full aspect-video">
+                <div className="w-[98vw] md:w-[90vw] max-w-[1600px] aspect-video mx-auto">
                   <iframe
                     className="w-full h-full"
                     src={
