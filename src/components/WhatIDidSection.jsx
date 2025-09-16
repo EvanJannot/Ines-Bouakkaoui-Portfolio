@@ -208,7 +208,7 @@ export default function WhatIDidSection({ items = [] }) {
           onClick={close}
         >
           <div
-            className="relative w-screen h-screen md:w-auto md:h-auto max-w-[98vw] max-h-[98vh]"
+            className="relative max-w-[98vw] max-h-[98vh] w-full grid place-items-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
