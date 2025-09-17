@@ -566,10 +566,10 @@ export const PROJECTS = [
 
     //Results
     resultsVideo: "https://youtu.be/JqVL09kwadI",
-    resultsImages: [
+    /*resultsImages: [
       { src: MosaicGraph, alt: "Mosaic graph" },
       { src: ShapesGraph, alt: "Shapes Graph" },
-    ],
+    ],*/
 
     whatIDidItems: [
       //Pattern creation
