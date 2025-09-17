@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 export default function ResultsSection({
   id = "results",
@@ -136,11 +137,52 @@ function Lightbox({ img, onClose, onPrev, onNext }) {
 
           {/* Image */}
           <div className="bg-black/10 rounded-lg overflow-hidden p-0 md:p-2">
-            <img
-              src={img.src}
-              alt={img.alt || "Full image"}
-              className="max-h-[80vh] w-auto mx-auto object-contain"
-            />
+            <TransformWrapper
+              minScale={0.5}
+              maxScale={8}
+              initialScale={1}
+              centerOnInit
+              doubleClick={{ mode: "zoomIn", step: 0.8 }}
+              wheel={{ step: 0.15 }}
+              pinch={{ step: 0.15 }}
+              wrapperClass="w-[98vw] h-[94vh] mx-auto rounded-lg overflow-hidden bg-black/5"
+              contentClass="w-fit h-fit"
+              limitToBounds={true}
+              boundsPadding={0.9}
+            >
+              {({ zoomIn, zoomOut, resetTransform }) => (
+                <>
+                  {/* Boutons de contrôle */}
+                  <div className="absolute top-3 left-3 z-[101] flex gap-2">
+                    <button
+                      onClick={() => zoomIn()}
+                      className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                    >
+                      +
+                    </button>
+                    <button
+                      onClick={() => zoomOut()}
+                      className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                    >
+                      −
+                    </button>
+                    <button
+                      onClick={() => resetTransform()}
+                      className="px-2 py-1 rounded bg-white/90 shadow hover:cursor-pointer"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                  <TransformComponent>
+                    <img
+                      src={img.src}
+                      alt={img.alt || "Full image"}
+                      className="max-h-[80vh] w-auto mx-auto object-contain"
+                    />
+                  </TransformComponent>
+                </>
+              )}
+            </TransformWrapper>
           </div>
         </div>
 
