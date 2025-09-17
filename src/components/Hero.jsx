@@ -1,5 +1,6 @@
 import unrealLogo from "../assets/UnrealLogo.png";
 import unityLogo from "../assets/UnityLogo.png";
+import CSLogo from "../assets/CSLogo.png";
 import rightImage from "../assets/HomePicture.svg";
 
 export default function HeroSection() {
@@ -45,6 +46,11 @@ export default function HeroSection() {
             src={unityLogo}
             alt="Unity"
             className="w-32 h-16 md:w-60 md:h-32 object-contain"
+          />
+          <img
+            src={CSLogo}
+            alt="C sharp C# logo"
+            className="w-32 h-16 md:w-30 md:h-26 object-contain"
           />
         </div>
       </div>
