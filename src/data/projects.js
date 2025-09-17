@@ -1,7 +1,7 @@
 import unrealLogo from "../assets/UnrealLogo.png";
 import unityLogo from "../assets/UnityLogo.png";
 import substanceLogo from "../assets/SubstanceLogo.svg";
-import BlenderLogo from "../assets/BlenderLogo.png";
+import CSLogo from "../assets/CSLogo.png";
 
 // Enfants-Lunes assets
 import banniereEnfantsLunes from "../assets/Enfants-Lunes/Splash_Enfants-Lunes.png";
@@ -637,7 +637,7 @@ export const PROJECTS = [
     tags: ["Tech Design", "Programming"],
     points: ["Survival Game", "Solo", "C#"],
     engineIcon: unityLogo,
-    toolIcon: null,
+    toolIcon: CSLogo,
     summary:
       "- Player system \n - Environment & hazards \n - NPC & Enemies \n - Items & inventory \n - Menus & game flow",
     thumb: viralNebulaThumb,
