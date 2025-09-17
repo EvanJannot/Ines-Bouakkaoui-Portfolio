@@ -510,7 +510,7 @@ export const PROJECTS = [
 
   {
     id: "mosaic",
-    title: "Mosaic",
+    title: "Mosaic Material",
     tags: ["Tech Art"],
     points: ["Material", "Solo", "Substance Designer"],
     engineIcon: substanceLogo,
