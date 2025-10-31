@@ -90,7 +90,207 @@ import zoneInfectee from "../assets/Viral-Nebula/zoneInfectee.PNG";
 import zoneInfecteeScript1 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
 import zoneInfecteeScript2 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
 
+//Flotte Fiasco project
+import BP_Interactable_PickUp_EventGraph from "../assets/Flotte-Fiasco/BP_Interactable_PickUp-EventGraph.png";
+import BP_Interactable_Stations_EventGraph from "../assets/Flotte-Fiasco/BP_Interactable_Stations-EventGraph.png";
+import BP_PickUp_Cuisine_AddPlayerInput from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-AddPlayerInput.png";
+import BP_PickUp_Cuisine_GenerateCombo from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-GenerateCombo.png";
+import BP_PickUp_Cuisine_CompareCombos from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-CompareCombos.png";
+import BP_PickUp_Cuisine_SetUIMaterial from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-SetUIMaterial.png";
+import BP_PickUp_Cuisine_EventGraph from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-EventGraph.png";
+//import from "../assets/Flotte-Fiasco/";
+import BP_PickUp_Harpon_EventGraph from "../assets/Flotte-Fiasco/BP_PickUp_Harpon-EventGraph.png";
+import BP_PickUp_Harpon_UpdateVisee from "../assets/Flotte-Fiasco/BP_PickUp_Harpon-UpdateVisee.png";
+import BP_PickUp_Harpon_ActorsToIgnore from "../assets/Flotte-Fiasco/BP_PickUp_Harpon-ActorsToIgnore.png";
+import BP_ThirdPersonCharacter_EventGraph from "../assets/Flotte-Fiasco/BP_ThirdPersonCharacter-EventGraph.png";
+import BP_ThirdPersonCharacter_Navigation from "../assets/Flotte-Fiasco/BP_ThirdPersonCharacter-Navigation.png";
+import BP_ThirdPersonCharacter_SwitchCollectible from "../assets/Flotte-Fiasco/BP_ThirdPersonCharacter-SwitchCollectible.png";
+import BP_ThirdPersonCharacter_SwitchToCook from "../assets/Flotte-Fiasco/BP_ThirdPersonCharacter-SwitchToCook.png";
+import BP_Raft_Base1_DeathBox from "../assets/Flotte-Fiasco/BP_Raft_Base1-DeathBox.png";
+import GM_Multi_CreationLocalPlayer from "../assets/Flotte-Fiasco/GM_Multi-CreationLocalPlayer.png";
+import GM_Multi_Respawn from "../assets/Flotte-Fiasco/GM_Multi-Respawn.png";
+import ABP_Bean_AnimGraph from "../assets/Flotte-Fiasco/ABP_Bean-AnimGraph.png";
+
 export const PROJECTS = [
+//Flotte Fiasco project
+/*{
+  //Card
+  id: "flotte-fiasco",
+  title: "Flotte Fiasco - WIP",
+  tags: ["Tech Design"],
+  points: ["Co-op party game", "Team of 6", "Blueprint"],
+  engineIcon: unrealLogo,
+  toolIcon: null,
+  contextMedia: null,
+  summary:
+    " - Core interaction (pickups & stations)\n - Cooking combo minigame\n - Harpoon/fishing tool (aim & reel-in)\n - Raft death & respawn loop\n - Local multiplayer (create & respawn)\n - Animation BP",
+  thumb: null,
+
+  //Page
+  repoUrl: "",
+  duration: "School project - started in August 2025",
+  year: "2025",
+
+  //Context
+  contextText:
+    "Flotte Fiasco is a <strong>multiplayer cooperative prototype</strong> where players collaborate on a raft to collect resources, cook, and keep the raft afloat. " +
+    "My contributions focus on <strong>interaction architecture</strong> (parent classes for pickups & stations), <strong>tool gameplay</strong> (harpooning, fishing, cooking, navigating), " +
+    "<strong>event/respawn loops</strong> tied to the gameplay, <strong>local multiplayer creation/respawn</strong>, and an <strong>Animation Blueprint</strong> that speeds up animator iteration.",
+  //team: [
+    //{ name: "Me", linkedin: "https://www.linkedin.com/in/ines-bouakkaoui/", roles: "Tech Designer, Blueprint Systems" },
+  //],
+  tools: ["Unreal Engine 5", "Blueprint", "GitHub (GitKraken)"],
+
+  //Needs
+  needs: [
+    {
+      label: "Core interaction framework",
+      desc: "Unify pickup & station logic with consistent attach/inputs across the raft.",
+    },
+    {
+      label: "Cooking station",
+      desc: "Randomized combo generation, input capture & step-by-step validation, success/fail feedback.",
+    },
+    {
+      label: "Tool gameplay (Harpoon/Fishrod)",
+      desc: "Aiming trace, target filtering, and right-stick ‘reel-in’ to pull floating resources.",
+    },
+    {
+      label: "Failure & respawn loop",
+      desc: "Players falling in water + station/tool recovery on the raft to prevent soft-locks.",
+    },
+    {
+      label: "Local multiplayer",
+      desc: "Create local players, assign controllers, and ensure correct respawn/possession.",
+    },
+    {
+      label: "Animator workflow",
+      desc: "Provide an Anim Graph with clear blend-by-type logic to accelerate iteration.",
+    },
+  ],
+  resultsVideo: "",
+  resultsImages: [
+  ],
+  whatIDidItems: [
+
+    //Character systems
+    {
+      anchor: "player-character",
+      category: "Third Person Character systems",
+      details:
+        "Pickup/Drop/Switch / station IMC enable/disable / input routing (Navigation, Harpoon, Cuisine, Pêche) / Death()",
+      longText:
+        "<strong>• BP_ThirdPersonCharacter:</strong> unified functions <em>Pickup</em>, <em>Drop</em>, <em>SwitchCollectible</em>, <em>SwitchToCook</em> and management of <strong>Input Mapping Contexts</strong> per station. " +
+        "Routes inputs to the active station/tool and handles character <strong>Death()</strong>.",
+      tag: ["Tech Design"],
+      media: [
+        BP_ThirdPersonCharacter_EventGraph,
+        BP_ThirdPersonCharacter_Navigation,
+        BP_ThirdPersonCharacter_SwitchCollectible,
+        BP_ThirdPersonCharacter_SwitchToCook,
+      ],
+    },
+
+    //Interaction
+    {
+      anchor: "interaction-system",
+      category: "Interaction system",
+      details:
+        "Parent class for interactables / pickup & drop / overlap & socket attach / stations attach player",
+      longText:
+        "<strong>• BP_Interactable_PickUp (abstract):</strong> centralizes pickup, drop and overlap logic; attaches items to the player’s socket. \n" +
+        "<strong>• BP_Interactable_Station (child):</strong> overrides pickup/drop to <strong>attach the character to the station</strong> (operate inputs/UI).",
+      tag: ["Tech Design"],
+      media: [
+        BP_Interactable_PickUp_EventGraph,
+        BP_Interactable_Stations_EventGraph,
+      ],
+    },
+
+    //Cooking
+    {
+      anchor: "cooking-system",
+      category: "Cooking system",
+      details:
+        "Player input capture / random combo / compare step-by-step / success & fail feedback / UI material update",
+      longText:
+        "<strong>• BP_Cuisine:</strong> <em>AddPlayerInput</em> stores inputs; <em>GenerateCombo</em> pulls randomized entries from a DataTable; <em>CompareCombos</em> validates each index. " +
+        "On result, triggers <strong>Cooking Success / Cooking Fail</strong> and updates a <strong>dynamic UI material</strong>.",
+      tag: ["Tech Design", "Tech Art"],
+      media: [
+        BP_PickUp_Cuisine_EventGraph,
+        BP_PickUp_Cuisine_GenerateCombo,
+        BP_PickUp_Cuisine_AddPlayerInput,
+        BP_PickUp_Cuisine_CompareCombos,
+        BP_PickUp_Cuisine_SetUIMaterial,
+      ],
+    },
+
+    //Harpoon & fishrod
+    {
+      anchor: "harpoon-fish-system",
+      category: "Harpoon/Fish system",
+      details: "Aiming trace / actors-to-ignore / closest hit / right-stick reel-in",
+      longText:
+        "<strong>• BP_PickUp_Harpon:</strong> custom aim trace with an <em>ActorsToIgnore</em> list, selects the closest valid hit, then <strong>reels the object in</strong> when the right stick is shaken.",
+      tag: ["Tech Design"],
+      media: [
+        BP_PickUp_Harpon_EventGraph,
+        BP_PickUp_Harpon_UpdateVisee,
+        BP_PickUp_Harpon_ActorsToIgnore,
+      ],
+    },
+
+    //Raft death/respawn
+    {
+      anchor: "raft-death-respawn",
+      category: "Raft death & respawn",
+      details: "Death volume around raft / respawn player & recover tools/stations on deck",
+      longText:
+        "<strong>• BP_Raft_Base:</strong> when a player falls in water, call <em>Death</em> on the character and <strong>respawn</strong> them at the raft’s point. " +
+        "If a harpoon/rod is in use, <strong>teleport it back</strong> to a safe socket to avoid soft-locks.",
+      tag: ["Tech Design"],
+      media: [BP_Raft_Base1_DeathBox],
+    },
+
+    //Local multiplayer
+    {
+      anchor: "local-multiplayer",
+      category: "Local multiplayer",
+      details: "Create local players (up to 4) / bind controllers / shared raft control",
+      longText:
+        "<strong>• GM_Multi:</strong> looped <em>Create Local Player</em>, set default pawn class and <em>Restart Player</em> for each controller. Ensures consistent mappings for co-op on one raft.",
+      tag: ["Tech Design"],
+      media: [GM_Multi_CreationLocalPlayer],
+    },
+
+    //Multiplayer respawn
+    {
+      anchor: "multiplayer-respawn",
+      category: "Multiplayer respawn",
+      details: "Color assignment + correct controller possession on respawn",
+      longText:
+        "<strong>• GM_Multi (Respawn Player):</strong> spawn character, set mesh material from a <em>PlayerColors</em> array, then <strong>possess</strong> with the proper <em>PlayerController</em> to avoid controller swaps.",
+      tag: ["Tech Design"],
+      media: [GM_Multi_Respawn],
+    },
+
+    //Animation BP
+    {
+      anchor: "animation-blueprint",
+      category: "Animation Blueprint",
+      details: "Anim Graph per pickup type + hold/cooking layers for faster animator iteration",
+      longText:
+        "<strong>• ABP_Bean:</strong> <em>Blend Poses by Enum</em> for pickup types (default, fishing, harpoon, navigation, etc.), gated ‘Is Item Held?’ layer, and a dedicated cooking layer. " +
+        "This structure keeps <strong>gameplay states readable</strong> and accelerates animation work.",
+      tag: ["Tech Art"],
+      media: [ABP_Bean_AnimGraph],
+    },
+  ],
+}, //Fin Flotte Fiasco*/
+
+
+
   //Enfants-Lunes project
   {
     //Card
