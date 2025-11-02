@@ -178,10 +178,10 @@ export const PROJECTS = [
         anchor: "player-character",
         category: "Third Person Character systems",
         details:
-          "Pickup/Drop/Switch / station IMC enable/disable / input routing (Navigation, Harpoon, Cuisine, Pêche) / Death()",
+          "Pickup/Drop/Switch / station IMC enable/disable / input routing (Navigation, Harpoon, Cuisine, Pêche) / Death",
         longText:
           "<strong>• BP_ThirdPersonCharacter:</strong> unified functions <em>Pickup</em>, <em>Drop</em>, <em>SwitchCollectible</em>, <em>SwitchToCook</em> and management of <strong>Input Mapping Contexts</strong> per station. " +
-          "Routes inputs to the active station/tool and handles character <strong>Death()</strong>.",
+          "Routes inputs to the active station/tool and handles character <strong>Death</strong>.",
         tag: ["Tech Design"],
         media: [
           BP_ThirdPersonCharacter_EventGraph,
