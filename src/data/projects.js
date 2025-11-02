@@ -91,7 +91,7 @@ import zoneInfecteeScript1 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG"
 import zoneInfecteeScript2 from "../assets/Viral-Nebula/zoneInfecteeScript1.PNG";
 
 //Flotte Fiasco project
-import FF_ConceptArt from "../assets/flotte-fiasco/concept-art.jpeg";
+import FF_ConceptArt from "../assets/Flotte-Fiasco/concept-art.jpeg";
 import BP_Interactable_PickUp_EventGraph from "../assets/Flotte-Fiasco/BP_Interactable_PickUp-EventGraph.png";
 import BP_Interactable_Stations_EventGraph from "../assets/Flotte-Fiasco/BP_Interactable_Stations-EventGraph.png";
 import BP_PickUp_Cuisine_AddPlayerInput from "../assets/Flotte-Fiasco/BP_PickUp_Cuisine-AddPlayerInput.png";
@@ -116,7 +116,7 @@ export const PROJECTS = [
   {
     //Card
     id: "flotte-fiasco",
-    title: "Flotte Fiasco - WIP",
+    title: "Flotte Fiasco - WIP - Page under construction",
     tags: ["Tech Design"],
     points: ["Co-op party game", "Team of 6", "Blueprint"],
     engineIcon: unrealLogo,
@@ -127,7 +127,7 @@ export const PROJECTS = [
     thumb: FF_ConceptArt,
 
     //Page
-    repoUrl: "",
+    repoUrl: "https://github.com/collegebdeb/A25_PA_FlotteFiasco",
     duration: "School project - started in August 2025",
     year: "2025",
 
@@ -168,7 +168,7 @@ export const PROJECTS = [
         desc: "Provide an Anim Graph with clear blend-by-type logic to accelerate iteration.",
       },
     ],
-    resultsVideo: "",
+    resultsVideo: "https://youtu.be/bFJpdtAay4A",
     resultsImages: [
     ],
     whatIDidItems: [
