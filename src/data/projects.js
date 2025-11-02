@@ -121,10 +121,10 @@ export const PROJECTS = [
     points: ["Co-op party game", "Team of 6", "Blueprint"],
     engineIcon: unrealLogo,
     toolIcon: null,
-    contextMedia: null,
+    contextMedia: FF_ConceptArt,
     summary:
       " - Core interaction (pickups & stations)\n - Cooking combo minigame\n - Harpoon/fishing tool (aim & reel-in)\n - Raft death & respawn loop\n - Local multiplayer (create & respawn)\n - Animation BP",
-    thumb: null,
+    thumb: FF_ConceptArt,
 
     //Page
     repoUrl: "",
