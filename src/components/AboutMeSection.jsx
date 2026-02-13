@@ -5,7 +5,7 @@ import photo_pro from "../assets/about/Photo_professionnelle.jpg";
 
 export default function AboutMeSection({
   title = "About me",
-  contextText = "I am a curious and dedicated <strong>technical game designer</strong>. Formerly a <strong>chemist</strong> with laboratory experience, these experiences gave me a <strong>rigorous work ethic</strong> and allowed me to develop my analytical skills, my <strong>sense of responsibility</strong> and commitment to <strong>meeting production deadlines</strong>, which I now <strong>apply to video games.</strong>", // string
+  contextText = "I am a curious and dedicated <strong>technical animator and technical game designer</strong>. Formerly a <strong>chemist</strong> with laboratory experience, these experiences gave me a <strong>rigorous work ethic</strong> and allowed me to develop my analytical skills, my <strong>sense of responsibility</strong>, which I now <strong>apply to video games.</strong>", // string
   media = photo_pro,
   mediaAlt = "Project media",
 }) {

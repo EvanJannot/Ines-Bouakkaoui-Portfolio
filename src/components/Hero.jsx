@@ -23,7 +23,7 @@ export default function HeroSection() {
 
         {/* Rôles */}
         <div className="flex gap-3 sm:gap-4 md:gap-8 flex-wrap">
-          {["Technical Game Designer",].map(
+          {["Technical Animator", "Technical Game Designer"].map(
             (role) => (
               <p
                 key={role}
